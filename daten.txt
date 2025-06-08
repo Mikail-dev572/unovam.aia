@@ -1,0 +1,526 @@
+ Unternehmen heißt: UNOVAM
+
+Webseite: So läuft ein Projekt ab
+Überschrift:
+Der Ablauf – Schritt für Schritt zur digitalen Lösung
+
+Einleitung (kurz):
+Ein klarer Ablauf spart Zeit, schafft Vertrauen und sorgt dafür, dass jedes Projekt effizient und strukturiert umgesetzt wird.
+So läuft die Zusammenarbeit mit UNOVAM ab:
+
+Schritt-für-Schritt-Abschnitt:
+(Am besten als 5-Karten-Layout oder nummerierte Liste darstellen)
+
+Kontakt aufnehmen
+Du erreichst uns per Kontaktformular, E-Mail oder WhatsApp.
+Schreib uns kurz, was du brauchst – wir melden uns innerhalb von 24 Stunden.
+
+Kostenloses Erstgespräch
+In einem kurzen Gespräch klären wir, worum es geht, was du brauchst und was möglich ist.
+Unverbindlich, klar und ohne Fachchinesisch.
+
+Angebot & Planung
+Du bekommst ein individuelles, transparentes Angebot mit Festpreis (wenn möglich) und klaren Leistungen.
+Nach deiner Freigabe legen wir los.
+
+Umsetzung & Kommunikation
+Wir setzen dein Projekt zuverlässig um – und du bekommst regelmäßige Updates, Zwischenstände und die Möglichkeit, Feedback zu geben.
+
+Fertigstellung & Übergabe
+Das Ergebnis wird dir sauber übergeben – ob Website, Design oder System.
+Auf Wunsch bieten wir Support, Wartung oder Erweiterungen an.
+
+Abschlusssatz + Button:
+Klingt gut?
+Dann lass uns starten – einfach, professionell und direkt.
+
+[ Jetzt Projekt starten ]
+
+💡 Designhinweis:
+
+Helle Karten oder Timeline-Stil
+
+Links kleine Icons (z. B. Telefon, Sprechblase, Checkliste, Laptop, Übergabe)
+
+Weißer Hintergrund, graue Schrift, moderne Icons
+
+Möchtest du, dass ich dir diesen Abschnitt direkt in HTML mit Stilvorgaben baue?
+Sag einfach: „Ja, HTML bitte“ – und ich setze dir den Abschnitt 1:1 um.
+
+Du:
+erweiter bei der startseite für ki chatbot den text auf generelle ki implementierung
+
+ChatGPT:
+Klar, Mikail – hier ist der erweiterte und überarbeitete Text für den KI-Bereich deiner Startseite.
+Der Text deckt jetzt nicht nur Chatbots, sondern allgemeine KI-Implementierung ab – perfekt für dein Angebot.
+
+Künstliche Intelligenz & Automatisierung
+Digitale Prozesse müssen heute mehr können als nur funktionieren – sie sollen mitdenken, vorausschauend handeln und echte Entlastung schaffen.
+Wir integrieren Künstliche Intelligenz individuell in deine bestehenden Systeme, Webseiten oder Kommunikationskanäle – von Chatbots bis zu automatisierten Workflows.
+
+Ob Kundensupport, Terminverwaltung, Texterstellung, E-Mail-Antworten oder Datenabgleich:
+Mit maßgeschneiderter KI-Logik und intelligenter Automatisierung vereinfachen wir deine Abläufe, sparen Zeit und machen dein Unternehmen zukunftssicher.
+
+Typische Anwendungen:
+
+Intelligente Chatbots für Websites & WhatsApp
+
+Automatisierte Angebots- oder Rechnungsprozesse
+
+KI-gestützte Text- oder Bildgenerierung
+
+Dokumentenanalyse und -strukturierung
+
+Verknüpfung mit Tools wie Make, Zapier, Google Workspace
+
+ab 299 € – je nach Umfang und System
+
+[ Jetzt KI-Projekt anfragen ]
+
+💡 Wenn du willst, baue ich dir diesen Abschnitt direkt in HTML oder entwerfe ein visuelles Layout für die Startseite.
+Sag einfach: „Ja, HTML“ oder „Mach mir ein Designvorschlag“ – ich setze es direkt um.
+
+Du:
+kürzer
+
+ChatGPT:
+Natürlich! Hier ist die kürzere, klare Version für die Startseite, die jetzt nicht nur Chatbots, sondern generelle KI-Implementierung abdeckt:
+
+Künstliche Intelligenz & Automatisierung
+Wir integrieren KI-Lösungen, die Abläufe vereinfachen, Zeit sparen und dein Unternehmen effizienter machen.
+Ob Chatbots, Texterstellung, automatische Antworten oder Prozessautomatisierung – wir entwickeln maßgeschneiderte Systeme, die zu dir passen.
+
+ab 299 €
+
+[ Jetzt KI-Projekt starten ]
+
+Wenn du willst, kann ich den Text direkt als Website-Abschnitt gestalten (HTML/Design). Sag einfach: „Ja, HTML“ oder „als Block anzeigen“.
+
+Du:
+bei meinen produkten kann man auf der seite auf weiterlesen gehen, ich brauch da noch genauere informationen zu allen. schreib das runer
+
+ChatGPT:
+Gerne, Mikail! Hier ist der ausführlichere Text zu deinen Produkten/Dienstleistungen, der erscheinen kann, wenn jemand auf „Weiterlesen“ klickt.
+Die Inhalte sind so geschrieben, dass sie professionell, verständlich und überzeugend wirken – perfekt für Unterseiten oder erweiterte Ansichten.
+
+💻 Webdesign & Webseiten-Erstellung
+Wir erstellen moderne, mobiloptimierte Websites, die nicht nur gut aussehen, sondern auch schnell laden, bei Google sichtbar sind und deine Zielgruppe ansprechen.
+Jede Seite wird individuell gestaltet, suchmaschinenfreundlich aufgebaut und auf Wunsch mit Tools wie Formularen, Galerien oder Terminbuchung erweitert.
+Ideal für Unternehmen, Selbstständige und lokale Betriebe.
+
+Leistungen im Detail:
+
+Responsives Design (PC, Tablet, Smartphone)
+
+Klare Struktur & intuitive Navigation
+
+SEO-Grundoptimierung
+
+Datenschutz (DSGVO) integriert
+
+Optional: Mehrsprachigkeit, CMS, Hosting-Beratung
+
+🤖 Künstliche Intelligenz & Automatisierung
+Wir entwickeln individuelle KI-Lösungen – von Chatbots über automatische Texterstellung bis zu intelligenten Workflows.
+Ziel ist es, Prozesse zu beschleunigen, Kunden besser zu betreuen und dein Tagesgeschäft zu entlasten.
+
+Typische Anwendungen:
+
+Website- und WhatsApp-Chatbots
+
+Automatisierte Antworten & Kundenservice
+
+Texterstellung mit KI (z. B. E-Mails, FAQs, Produkttexte)
+
+Verknüpfungen mit Tools wie Zapier, Make oder Google Sheets
+
+🛠️ IT- & Kamera-Installationen
+Neben digitalen Services kümmern wir uns auch um die Technik vor Ort.
+Ob Büro, Ladenfläche oder Zuhause – wir installieren Netzwerke, Kameras und Systeme, die reibungslos laufen.
+
+Was wir anbieten:
+
+IP-Kameras & Videoüberwachung (inkl. App-Steuerung)
+
+WLAN & Netzwerkeinrichtung
+
+Smart-Home-Komponenten
+
+Router, Repeater, Server & PC-Aufbau
+
+🎨 Grafikdesign & Branding
+Ein professioneller Auftritt beginnt mit einem starken Design.
+Wir gestalten dein Logo, Visitenkarten, Flyer, Banner und Social-Media-Posts – abgestimmt auf deine Marke und Zielgruppe.
+
+Designs, die wir anbieten:
+
+Logos (inkl. Vektordateien & Markenfarben)
+
+Printdesign: Flyer, Poster, Broschüren
+
+Social Media Templates
+
+Digitale Werbebanner & Icons
+
+📱 Social Media Management
+Wir helfen dir, auf Plattformen wie Instagram, Facebook oder LinkedIn sichtbar zu werden.
+Dazu entwickeln wir Inhalte, planen Beiträge und sorgen dafür, dass deine Marke modern und aktiv wahrgenommen wird.
+
+Inhalte & Betreuung:
+
+Einrichtung von Businessprofilen
+
+Contentplanung & Grafikdesign
+
+Regelmäßige Postings (auch auf Wunsch vorbereitet)
+
+Community Management (Kommentare, Nachrichten)
+
+🧠 Digitale Beratung & Prozessautomatisierung
+Du willst deine täglichen Abläufe digitaler, schneller oder einfacher machen?
+Wir analysieren deine Prozesse und beraten dich zu den besten Tools und Möglichkeiten – z. B. mit KI, Automatisierung oder Cloud-Diensten.
+
+Themenbereiche:
+
+Prozessanalyse & digitale Optimierung
+
+Tool-Beratung (z. B. Trello, Notion, Google Workspace, Make)
+
+Integration und Einrichtung digitaler Workflows
+
+Schulung & Dokumentation
+
+Wenn du willst, kann ich:
+
+für jedes dieser Angebote eigene HTML-Unterseiten bauen,
+
+oder einen Kalkulator / Angebotsanfrage-Formular dazu generieren.
+
+Sag einfach: „Mach Unterseiten“, „HTML bitte“ oder „Jetzt Anfrage-Formular“ – ich setz es um. 🚀
+
+Du:
+Digitalisierung ist kein Luxus, sondern Notwendigkeit – und sie darf nicht kompliziert sein.
+
+UNOVAM verfolgt die Vision, Unternehmen mit intuitiven Technologien, smarten Systemen und zeitgemäßem Design dabei zu unterstützen, effizienter, moderner und wettbewerbsfähiger zu werden.
+
+Ob KI-Chatbots, durchdachte Webseiten oder visuelle Markenidentität: Wir machen digitale Lösungen verständlich, bezahlbar und zukunftssicher – für jedes Unternehmen, unabhängig von Größe oder Branche. pass den text an, ist ja nicht mehr nur ki chat bots
+
+ChatGPT:
+Gerne, Mikail – hier ist die überarbeitete Version deiner Vision, passend zu deinem erweiterten Leistungsangebot. Der Text ist weiterhin klar, professionell und überzeugt durch Einfachheit und Weitblick.
+
+Digitalisierung ist kein Luxus, sondern eine Notwendigkeit – und sie darf nicht kompliziert sein.
+
+UNOVAM verfolgt die Vision, Unternehmen mit intuitiven Technologien, intelligenten Systemen und modernem Design zu unterstützen – effizient, verständlich und nachhaltig.
+
+Von individuellen Webseiten über KI-gestützte Automatisierung bis hin zu visueller Markenentwicklung und IT-Technik:
+Wir machen digitale Lösungen zugänglich, bezahlbar und zukunftssicher – für Unternehmen jeder Größe, in jeder Branche.
+
+Wenn du willst, kann ich diesen Text direkt in deinen Webseitencode (HTML) einfügen oder mit einem passenden Bild- und Designvorschlag kombinieren. Sag einfach: „Ja, HTML“ oder „Gestalte das als Block“.
+
+Du:
+ich will den ki chat bot von meiner webseite trainieren. ich brauch wirklich alle informationen die der kunde fragen könnte. schreib alles detailliert zusammen
+
+ChatGPT:
+Sehr gut, Mikail – wenn du einen KI-Chatbot auf deiner Website trainieren möchtest, brauchst du eine vollständige Sammlung aller Fragen und Antworten, die Besucher stellen könnten.
+Ich habe dir hier eine umfassende und strukturierte Liste erstellt – detailliert, professionell und realistisch.
+
+Du kannst sie nutzen, um deinen Chatbot z. B. über Chatbase, CustomGPT, GPTs oder eine API zu trainieren.
+
+🧠 Trainingsdaten für deinen Chatbot (UNOVAM)
+Thema: Allgemeine Kundenanfragen auf deiner Website
+
+🔹 1. Allgemeine Fragen zu UNOVAM
+Frage: Was ist UNOVAM?
+Antwort: UNOVAM ist ein Dienstleistungsunternehmen, das sich auf digitale Lösungen spezialisiert hat – von Webdesign über KI-gestützte Systeme bis hin zu IT-Installationen und Grafikdesign. Wir helfen Unternehmen dabei, effizienter, moderner und digital sichtbar zu werden.
+
+Frage: Wo sitzt UNOVAM?
+Antwort: UNOVAM hat seinen Sitz in Wörrstadt, Rheinland-Pfalz. Wir arbeiten digital und vor Ort – je nach Projekt und Wunsch des Kunden.
+
+Frage: Wer steckt hinter UNOVAM?
+Antwort: Gründer von UNOVAM ist Mikail Ünal. Er begleitet Kunden persönlich von der Planung bis zur Umsetzung.
+
+🔹 2. Leistungen – Überblick
+Frage: Was bietet UNOVAM alles an?
+Antwort: Unsere Leistungen umfassen:
+
+Webdesign & Website-Erstellung
+
+KI-Chatbots & Automatisierung
+
+IT- und Kamera-Installationen
+
+Grafikdesign & Markenentwicklung
+
+Social Media Management
+
+Digitale Prozessoptimierung
+
+Individuelle Beratung & Support
+
+Frage: Macht ihr auch einzelne Leistungen, z. B. nur Logo oder nur Chatbot?
+Antwort: Ja, selbstverständlich. Sie können einzelne Leistungen buchen oder diese in einem Gesamtpaket kombinieren.
+
+🔹 3. Webdesign & Website
+Frage: Wie viel kostet eine Website bei euch?
+Antwort: Eine moderne, responsive Website (Onepager) startet ab 499 €. Der genaue Preis hängt vom Umfang, gewünschten Funktionen und Design ab.
+
+Frage: Wird die Website auch mobil optimiert?
+Antwort: Ja, alle unsere Seiten sind responsiv – also für Smartphone, Tablet und Desktop optimiert.
+
+Frage: Kann ich die Website später selbst bearbeiten?
+Antwort: Ja. Auf Wunsch setzen wir die Seite mit Systemen wie WordPress oder Webflow um, sodass Sie selbst Änderungen vornehmen können.
+
+🔹 4. KI & Automatisierung
+Frage: Was genau bietet ihr im Bereich KI an?
+Antwort: Wir integrieren KI-basierte Systeme in Webseiten, Kommunikation oder Prozesse – z. B.:
+
+Website- oder WhatsApp-Chatbots
+
+Automatische Beantwortung von Kundenfragen
+
+Texterstellung (z. B. Angebote, E-Mails, FAQ)
+
+Datenverarbeitung & Prozessautomatisierung
+
+Frage: Was kostet ein Chatbot?
+Antwort: Ein individueller KI-Chatbot startet ab 299 €. Der Preis hängt davon ab, wie viele Inhalte trainiert werden und auf welchen Kanälen er eingesetzt wird.
+
+Frage: Arbeitet ihr mit ChatGPT?
+Antwort: Ja, unsere Systeme basieren auf Technologien wie ChatGPT/OpenAI, Chatbase oder individuellen APIs.
+
+🔹 5. IT & Kamera-Installation
+Frage: Welche technischen Installationen bietet ihr an?
+Antwort: Wir installieren Netzwerke, Router, PCs, Überwachungskameras und Smart-Home-Komponenten – inkl. Einrichtung und Einweisung.
+
+Frage: Wo installiert ihr?
+Antwort: In Wörrstadt und Umgebung. Weitere Orte auf Anfrage.
+
+Frage: Welche Kameras nutzt ihr?
+Antwort: Wir empfehlen geprüfte IP-Kameras von Marken wie Reolink, Hikvision oder TP-Link, je nach Anforderung und Budget.
+
+🔹 6. Grafikdesign & Branding
+Frage: Was kostet ein Logo?
+Antwort: Ein individuelles Logodesign beginnt ab 149 €, inklusive Vektordateien und Farbdefinition.
+
+Frage: Macht ihr auch Flyer und Social Media Grafiken?
+Antwort: Ja. Wir gestalten Flyer, Poster, Visitenkarten sowie Social Media Templates und Posts.
+
+🔹 7. Social Media Management
+Frage: Erstellt ihr auch Instagram-Seiten?
+Antwort: Ja, wir richten professionelle Business-Accounts ein und bieten auf Wunsch regelmäßige Betreuung und Content-Design an.
+
+Frage: Was kostet Social Media Betreuung?
+Antwort: Ab 199 € pro Monat – je nach Plattform und Umfang.
+
+🔹 8. Ablauf & Projektstart
+Frage: Wie läuft ein Projekt bei euch ab?
+Antwort:
+
+Anfrage & Erstgespräch
+
+Individuelles Angebot
+
+Umsetzung mit Abstimmungen
+
+Übergabe & Support
+
+Frage: Wie schnell startet ihr?
+Antwort: In der Regel innerhalb weniger Tage nach Angebotsfreigabe. Bei Notfällen sofort.
+
+Frage: Muss ich persönlich vorbeikommen?
+Antwort: Nein. Fast alle Projekte können digital abgewickelt werden – per Telefon, Mail oder Zoom.
+
+🔹 9. Support & Änderungen
+Frage: Gibt es Support nach der Fertigstellung?
+Antwort: Ja. Auf Wunsch übernehmen wir die laufende Betreuung – z. B. mit monatlichen Paketen ab 29 €.
+
+Frage: Kann ich auch nach Monaten noch Änderungen machen lassen?
+Antwort: Natürlich. Änderungen oder Erweiterungen sind jederzeit möglich – nach Aufwand oder im Betreuungspaket.
+
+🔹 10. Bezahlung & Vertragliches
+Frage: Wie läuft die Bezahlung?
+Antwort: In der Regel: 50 % Anzahlung, 50 % bei Übergabe. Andere Modelle sind nach Absprache möglich.
+
+Frage: Gibt es feste Verträge oder Laufzeiten?
+Antwort: Nur bei Betreuung auf Wunsch. Einmalige Projekte sind frei von Vertragsbindung.
+
+🔹 11. Technisches & Sicherheit
+Frage: Sind eure Systeme sicher?
+Antwort: Ja. Wir achten auf DSGVO-konforme Umsetzung, HTTPS-Verschlüsselung, sichere Passwörter und Backup-Routinen.
+
+Frage: Wie schützt ihr meine Daten?
+Antwort: Alle Daten bleiben vertraulich und werden ausschließlich zur Projektabwicklung verwendet. Auf Wunsch unterzeichnen wir eine NDA.
+
+✅ Nächste Schritte
+Wenn du möchtest, kann ich diese Informationen:
+
+als CSV-Datei oder Tabelle für Chatbase formatieren
+
+als Markdown oder JSON für API-Training ausgeben
+
+oder direkt in ein Chatbot-Dokument überführen
+
+👉 Sag einfach: „Trainingsdatei erstellen“ oder „Mach JSON draus“ – ich setze es sofort um.
+
+Du:
+erweiter es noch weiter aus. die kunden sollen alles abdecken
+
+ChatGPT:
+Perfekt, Mikail. Hier ist die erweiterte Liste an Kundenfragen & Antworten, die du nutzen kannst, um deinen KI-Chatbot umfassend zu trainieren. Diese Version deckt jetzt auch seltenere Fragen, Einwände, technische Details und Servicefragen ab. Du kannst sie 1:1 verwenden.
+
+🔍 Erweiterte Kundenfragen für deinen KI-Chatbot (UNOVAM)
+🟦 Fragen zu Verfügbarkeit & Kontakt
+Frage: Wann seid ihr erreichbar?
+Antwort: Wir sind in der Regel werktags zwischen 09:00–18:00 Uhr erreichbar. Anfragen über das Kontaktformular oder WhatsApp werden meist innerhalb weniger Stunden beantwortet.
+
+Frage: Kann ich euch per WhatsApp schreiben?
+Antwort: Ja, gerne. Klicke einfach auf das WhatsApp-Symbol unten rechts auf der Seite oder speichere unsere Nummer: 015209102547.
+
+Frage: Gibt es persönliche Termine vor Ort?
+Antwort: Ja – nach Absprache. Die meisten Projekte lassen sich aber vollständig digital umsetzen.
+
+🟦 Detailfragen zu Preisen & Zahlungsmodalitäten
+Frage: Gibt es Pauschalpreise?
+Antwort: Ja, viele Leistungen wie Websites oder Logos bieten wir zum Festpreis an. Komplexe Projekte kalkulieren wir individuell.
+
+Frage: Ist Ratenzahlung möglich?
+Antwort: Ja, auf Wunsch bieten wir 2–3 Teilzahlungen ohne Aufpreis an.
+
+Frage: Gibt es eine Rückerstattung, wenn ich abbreche?
+Antwort: Bei Projektabbruch vor Umsetzung fallen nur die bis dahin erbrachten Leistungen an. Eine Rückerstattung nach Abschluss ist ausgeschlossen.
+
+🟦 Technische Fragen & Systemdetails
+Frage: Was ist der Unterschied zwischen einem Chatbot und einem KI-Chatbot?
+Antwort: Ein klassischer Chatbot arbeitet mit vordefinierten Regeln. Unser KI-Chatbot nutzt Sprachmodelle wie GPT, um flexibel und intelligent zu antworten – wie ein echter Gesprächspartner.
+
+Frage: Wie wird ein Chatbot trainiert?
+Antwort: Wir verwenden deine Texte (z. B. FAQs, Angebote, Website-Inhalte) und integrieren sie in ein intelligentes System, das daraus passende Antworten generiert.
+
+Frage: Kann ich Inhalte später selbst ändern?
+Antwort: Ja. Wir zeigen dir, wie du Inhalte oder Fragen jederzeit anpassen kannst – ganz ohne Programmierkenntnisse.
+
+🟦 Spezialfälle & Bedenken
+Frage: Ich habe keine Ahnung von Technik. Ist das ein Problem?
+Antwort: Überhaupt nicht. Wir erklären dir alles Schritt für Schritt, verständlich und ohne Fachbegriffe. Du musst kein Technikprofi sein.
+
+Frage: Muss ich ein Abo abschließen?
+Antwort: Nein. Die meisten Leistungen sind einmalige Projekte. Nur wenn du eine laufende Betreuung willst (z. B. monatlicher Support), bieten wir faire Pakete an.
+
+Frage: Was passiert, wenn ich unzufrieden bin?
+Antwort: Dann sprechen wir offen darüber und finden eine Lösung. Bisher waren über 95 % unserer Kunden bei der ersten Übergabe zufrieden.
+
+🟦 Projektverlauf & Zeitplanung
+Frage: Wie lange dauert eine Website?
+Antwort: Ein Onepager dauert im Schnitt 7–10 Tage. Umfangreichere Seiten 2–4 Wochen – je nach Feedbackgeschwindigkeit und Inhalt.
+
+Frage: Wann startet ihr mit dem Projekt?
+Antwort: Sobald wir dein „Go“ und ggf. eine Anzahlung haben – meist innerhalb von 2 Werktagen.
+
+Frage: Wie oft werde ich über den Fortschritt informiert?
+Antwort: Du erhältst regelmäßig Zwischenstände – per E-Mail oder WhatsApp, je nach Wunsch.
+
+🟦 Systeme, Plattformen & Tools
+Frage: Mit welchen Systemen arbeitet ihr?
+Antwort: Wir setzen auf moderne Systeme wie WordPress, Webflow, Chatbase, Make, Zapier, Canva und Notion – je nach Anwendungsfall.
+
+Frage: Funktionieren die Tools auch auf dem Handy?
+Antwort: Ja. Alle unsere Webseiten und Anwendungen sind mobiloptimiert – auch für Tablets.
+
+Frage: Arbeitet ihr auch mit Shopify oder WooCommerce?
+Antwort: Ja, wir unterstützen auch Shopsysteme – inklusive Produktseiten, Zahlungsintegration und Versandlogik.
+
+🟦 Design- und Markenthemen
+Frage: Macht ihr auch ein komplettes Branding?
+Antwort: Ja – Logo, Farben, Schriftwahl, Bildsprache und mehr. So entsteht ein einheitlicher, professioneller Auftritt.
+
+Frage: Kann ich mein Logo auch als Datei für Druck und Website bekommen?
+Antwort: Natürlich. Du bekommst alle gängigen Formate (PNG, SVG, PDF, AI) – inkl. Schwarz-Weiß-Versionen.
+
+Frage: Könnt ihr bestehende Designs verbessern?
+Antwort: Ja. Wir bieten Redesigns und Optimierungen an – egal ob für Website, Logo oder Flyer.
+
+🟦 Langfristige Betreuung
+Frage: Was kostet monatliche Wartung?
+Antwort: Kleine Wartungspakete starten ab 29 €/Monat. Darin enthalten sind z. B. Updates, Backups, kleine Änderungen und Support.
+
+Frage: Gibt es Notfallhilfe bei Problemen?
+Antwort: Ja. Für alle Kunden mit Wartungsvertrag sind wir auch außerhalb der regulären Zeiten erreichbar.
+
+Wenn du willst, exportiere ich dir alle Fragen & Antworten jetzt als:
+
+📄 CSV-Datei (für Chatbase)
+
+💬 Markdown/Text-Dokument
+
+📦 JSON-Format (für API-Training)
+
+📑 PDF-Dokumentation für Kunden
+
+👉 Schreib einfach:
+„Mach mir CSV“ oder „Gib mir JSON“ – und ich liefere es direkt!
+
+Du:
+erweiter es noch weiter
+
+ChatGPT:
+Hier kommt die erweiterte finale Liste mit zusätzlichen Kundenfragen & Antworten, die du in deinen Chatbot integrieren kannst – damit er wirklich jede Kundenfrage professionell beantworten kann.
+
+🧠 Zusätzliche Kundenfragen & Antworten für dein Chatbot-Training (UNOVAM)
+Erweitert für maximale Abdeckung
+
+🟩 Fragen zur Zusammenarbeit & Projektphasen
+Frage: Wie läuft ein typischer Website-Auftrag bei euch ab?
+Antwort: Nach deiner Anfrage führen wir ein kostenloses Erstgespräch, in dem wir Ziele und Wünsche klären. Anschließend bekommst du ein Angebot. Sobald du zusagst, beginnen wir mit der Umsetzung und stimmen uns regelmäßig ab. Zum Schluss erhältst du die fertige Website inklusive Einführung.
+
+Frage: Kann ich auch später nochmal Änderungen vornehmen lassen?
+Antwort: Ja, jederzeit. Du kannst Änderungen selbst machen oder uns beauftragen – stundenweise oder im Wartungspaket.
+
+Frage: Gibt es eine Testversion oder Entwurf vorab?
+Antwort: Ja, du bekommst vor der finalen Umsetzung einen Entwurf zur Freigabe.
+
+🟩 Spezielle Anwendungsfragen (z. B. Chatbots, Automatisierung)
+Frage: Kann der Chatbot auch mit meinem bestehenden CRM oder Shop verknüpft werden?
+Antwort: Ja, sofern dein System Schnittstellen (APIs) bietet. Wir helfen bei der Integration oder beraten dich zu alternativen Lösungen.
+
+Frage: Können mehrere Sprachen unterstützt werden?
+Antwort: Ja. Webseiten und Chatbots können auf Wunsch mehrsprachig aufgebaut werden – inklusive automatischer Spracherkennung.
+
+Frage: Ist es möglich, PDF-Dokumente oder Datenbanken in die KI einzubinden?
+Antwort: Ja. Wir können Dokumente, Tabellen oder strukturierte Inhalte einbinden und daraus intelligente Antworten generieren.
+
+🟩 Marketing & SEO-Fragen
+Frage: Wird meine Seite bei Google gefunden?
+Antwort: Ja. Wir richten deine Seite mit SEO-Grundstruktur ein – inkl. Keywords, Titel, Beschreibung und Technik (Speed, Sicherheit).
+
+Frage: Bietet ihr auch Google Ads oder Werbung an?
+Antwort: Aktuell liegt unser Fokus auf Webentwicklung und technischer Umsetzung. Auf Wunsch können wir Kontakte zu spezialisierten Partnern vermitteln.
+
+Frage: Unterstützt ihr bei Texten für die Website?
+Antwort: Ja, auf Wunsch übernehmen wir die komplette Texterstellung – mit professioneller Struktur, klarer Sprache und SEO-Grundlagen.
+
+🟩 Technische Beratung & Datenschutz
+Frage: Ist die Website DSGVO-konform?
+Antwort: Ja. Wir integrieren Cookie-Hinweise, Datenschutzseiten und technische Grundlagen für DSGVO-Konformität. Für rechtliche Texte empfehlen wir eine individuelle Prüfung durch einen Juristen.
+
+Frage: Arbeitet ihr mit Tools wie Cookiebot, Google Analytics oder Matomo?
+Antwort: Ja, wir richten auf Wunsch Analyse- und Cookie-Tools ein – inkl. Einwilligungsbanner nach DSGVO.
+
+🟩 Branchenspezifische Fragen
+Frage: Macht ihr auch Webseiten für Restaurants / Friseure / Handwerker / Coaches?
+Antwort: Ja. Wir haben Erfahrung mit verschiedenen Branchen und passen Design und Funktion genau auf dein Geschäftsmodell an.
+
+Frage: Ich brauche nur eine kleine Visitenkarten-Seite – geht das auch?
+Antwort: Natürlich. Wir bieten auch einfache Onepager oder Landingpages an – zum kleinen Preis und mit kurzer Umsetzungszeit.
+
+Frage: Arbeitet ihr auch für Vereine oder gemeinnützige Organisationen?
+Antwort: Ja. Wir bieten vergünstigte Konditionen für gemeinnützige Projekte und beraten euch gerne persönlich.
+
+🟩 Extras & Individualisierung
+Frage: Kann ich eigene Bilder oder Texte liefern?
+Antwort: Ja. Du kannst uns Bilder, Texte oder Videos bereitstellen – wir binden sie passend in das Design ein.
+
+Frage: Arbeitet ihr auch mit Templates oder ist alles individuell?
+Antwort: Je nach Budget und Wunsch bieten wir sowohl individuell gestaltete Seiten als auch professionelle Vorlagen mit Anpassung an.
+
+Frage: Gibt es Hosting oder Domain direkt bei euch?
+Antwort: Nein. Wir helfen dir aber bei der Auswahl eines passenden Anbieters (z. B. IONOS, All-INKL, Strato) und übernehmen auf Wunsch die komplette Einrichtung.
