@@ -1,3 +1,4 @@
+// Letzter Check: funktioniert noch!
 const express = require("express");
 const bodyParser = require("body-parser");
 const dotenv = require("dotenv");
