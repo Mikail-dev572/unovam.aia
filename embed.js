@@ -9,6 +9,7 @@
       background: #f9fafb;
       color: #444;
     }
+
     #chat-toggle, #chat-close {
       position: fixed;
       bottom: 24px;
@@ -24,12 +25,15 @@
       justify-content: center;
       background: #1a1a1a;
     }
+
     #chat-toggle svg, #chat-close svg {
       width: 28px;
       height: 28px;
       stroke: white;
     }
+
     #chat-close { display: none; }
+
     #chat-box {
       position: fixed;
       bottom: 90px;
@@ -45,6 +49,17 @@
       flex-direction: column;
       overflow: hidden;
       z-index: 999;
+      border: none;
+    }
+
+    @media (max-width: 600px) {
+      #chat-box {
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+      }
     }
   `;
 
@@ -85,4 +100,7 @@
     closeBtn.style.display = 'none';
     toggleBtn.setAttribute('aria-expanded', 'false');
   });
+
+  // 🔁 Chat direkt beim Laden öffnen
+  toggleBtn.click();
 })();
