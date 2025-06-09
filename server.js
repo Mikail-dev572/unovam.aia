@@ -2,31 +2,40 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const dotenv = require("dotenv");
 const fs = require("fs");
+const cors = require("cors");
 const OpenAI = require("openai");
 
 dotenv.config();
 
 const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.use(cors()); // ❗ Wichtig für Wix & GitHub Pages
 app.use(bodyParser.json());
-app.use(express.static(".")); // Serves index.html, logo.png, etc.
+app.use(express.static(".")); // z. B. logo.png, index.html
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-// Begrüßungstext beim Start
+// Begrüßung
 const startnachricht = "Guten Tag! Ich bin der digitale Assistent von UNOVAM. Gerne beantworte ich Ihre Fragen zu unseren Leistungen, Preisen oder Projektabläufen. Wie kann ich helfen?";
 
-// Eigene Inhalte laden
+// Daten aus daten.txt (optional)
 let eigeneDaten = "";
 try {
   eigeneDaten = fs.readFileSync("daten.txt", "utf8");
+  console.log("✅ daten.txt geladen.");
 } catch (err) {
   console.warn("⚠️ Keine daten.txt gefunden. Bot nutzt nur Standardwissen.");
 }
 
 app.post("/frage", async (req, res) => {
   const nutzerfrage = req.body.frage;
+  if (!nutzerfrage) {
+    return res.status(400).json({ antwort: "Frage fehlt im Request." });
+  }
+
   const alleDaten = eigeneDaten
     ? `Nutze dieses Firmenwissen:\n${eigeneDaten}\n\n`
     : "";
@@ -37,7 +46,10 @@ app.post("/frage", async (req, res) => {
     const antwort = await openai.chat.completions.create({
       model: "gpt-3.5-turbo",
       messages: [
-        { role: "system", content: "Du bist ein freundlicher, professioneller Assistent der Firma UNOVAM." },
+        {
+          role: "system",
+          content: "Du bist ein freundlicher, professioneller Assistent der Firma UNOVAM.",
+        },
         { role: "assistant", content: startnachricht },
         { role: "user", content: prompt },
       ],
@@ -50,6 +62,6 @@ app.post("/frage", async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
-  console.log("✅ Chatbot läuft auf http://localhost:3000");
+app.listen(PORT, () => {
+  console.log(`✅ Chatbot läuft auf http://localhost:${PORT}`);
 });
