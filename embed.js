@@ -1,5 +1,5 @@
 (function () {
-  // Nur auf Hauptseite ausführen, NICHT im eingebetteten iFrame
+  // Nur auf Hauptseite ausfÃ¼hren, NICHT im eingebetteten iFrame
   if (window.location.search.includes('embedded=true')) return;
 
   const css = `
@@ -75,12 +75,12 @@
 
   const closeBtn = document.createElement('button');
   closeBtn.id = 'chat-close';
-  closeBtn.setAttribute('aria-label', 'Chat schließen');
+  closeBtn.setAttribute('aria-label', 'Chat schlieÃŸen');
   closeBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>`;
 
   const chatBox = document.createElement('iframe');
   chatBox.id = 'chat-box';
-  chatBox.src = 'https://mikail-dev572.github.io/unovam.aia/chat-only.html'; // NEUER LINK
+  chatBox.src = 'https://mikail-dev572.github.io/unovam.aia/chat-only.html'; // korrektes Ziel
   chatBox.style.display = 'none';
 
   document.body.appendChild(toggleBtn);
@@ -101,6 +101,5 @@
     toggleBtn.setAttribute('aria-expanded', 'false');
   });
 
-  // ⛔️ WICHTIG: automatisches Öffnen deaktiviert
-  // toggleBtn.click(); ← diese Zeile wurde entfernt
+  // WICHTIG: kein automatischer Start!
 })();
