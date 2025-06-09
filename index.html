@@ -389,5 +389,12 @@
       });
     }
   </script>
+<script>
+  if (!window.location.search.includes('embedded=true')) {
+    const script = document.createElement('script');
+    script.src = "/embed.js";
+    document.body.appendChild(script);
+  }
+</script>
 </body>
 </html>
