@@ -1,22 +1,28 @@
-// Letzter Check: funktioniert noch!
 const express = require("express");
 const bodyParser = require("body-parser");
 const dotenv = require("dotenv");
 const fs = require("fs");
+const cors = require("cors");
 const OpenAI = require("openai");
 
 dotenv.config();
 
 const app = express();
+app.use(cors()); // <<< SEHR WICHTIG für GitHub + Wix
 app.use(bodyParser.json());
-app.use(express.static(".")); // Stellt index.html, logo.png usw. bereit
+app.use(express.static(".")); // Optional: für statische Dateien wie index.html
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-// Eigene Daten einlesen
-const eigeneDaten = fs.readFileSync("daten.txt", "utf8");
+// Sicher lesen
+let eigeneDaten = '';
+try {
+  eigeneDaten = fs.readFileSync("daten.txt", "utf8");
+} catch (e) {
+  console.error("Fehler beim Lesen von daten.txt:", e.message);
+}
 
 app.post("/frage", async (req, res) => {
   const frage = req.body.frage;
@@ -30,11 +36,12 @@ app.post("/frage", async (req, res) => {
 
     res.json({ antwort: antwort.choices[0].message.content });
   } catch (error) {
-  console.error("Fehler im /frage-Handler:", error);
-  res.status(500).json({ antwort: "Fehler: " + error.message });
+    console.error("Fehler im OpenAI-Aufruf:", error.message);
+    res.status(500).json({ antwort: "Fehler: " + error.message });
   }
 });
 
-app.listen(3000, () => {
-  console.log("✅ Chatbot läuft auf http://localhost:3000");
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`✅ Chatbot läuft auf http://localhost:${PORT}`);
 });
