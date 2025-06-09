@@ -444,24 +444,41 @@ if (window.innerWidth <= 768) {
   openChat();
 }
   function zeigeAntwortLangsam(text) {
-    const wrapper = document.createElement("div");
-    wrapper.className = "bot-message-wrapper";
-    const messageId = `msg-${Date.now()}`;
-    wrapper.innerHTML = `
-      <div class="logo-icon">
-        <img src="logo.png" alt="UNOVAM" />
-      </div>
-      <div>
-        <div class="message bot-message" id="${messageId}"></div>
-        <div class="feedback">
-          <button onclick="copyMessage(this, '${messageId}')" title="Kopieren"><i data-feather="copy"></i></button>
-          <button onclick="handleFeedback('${messageId}', 'up', this)" title="Gefällt mir"><i data-feather="thumbs-up"></i></button>
-          <button onclick="handleFeedback('${messageId}', 'down', this)" title="Gefällt mir nicht"><i data-feather="thumbs-down"></i></button>
-          <button onclick="neuerChat()" title="Neu starten"><i data-feather="refresh-ccw"></i></button>
-        </div>
-      </div>
+  const wrapper = document.createElement("div");
+  wrapper.className = "bot-message-wrapper";
+  const messageId = `msg-${Date.now()}`;
+
+  // Animation einfügen
+  wrapper.innerHTML = `
+    <div class="logo-icon">
+      <img src="logo.png" alt="UNOVAM" />
+    </div>
+    <div class="message bot-message typing" id="${messageId}">
+      <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+    </div>
+  `;
+  chat.appendChild(wrapper);
+  chat.scrollTop = chat.scrollHeight;
+
+  // Nach kurzer Zeit: Nachricht sofort anzeigen
+  setTimeout(() => {
+    const messageDiv = document.getElementById(messageId);
+    messageDiv.classList.remove("typing");
+    messageDiv.innerHTML = text;
+
+    // Feedback-Buttons anhängen
+    const feedbackDiv = document.createElement("div");
+    feedbackDiv.className = "feedback";
+    feedbackDiv.innerHTML = `
+      <button onclick="copyMessage(this, '${messageId}')" title="Kopieren"><i data-feather="copy"></i></button>
+      <button onclick="handleFeedback('${messageId}', 'up', this)" title="Gefällt mir"><i data-feather="thumbs-up"></i></button>
+      <button onclick="handleFeedback('${messageId}', 'down', this)" title="Gefällt mir nicht"><i data-feather="thumbs-down"></i></button>
+      <button onclick="neuerChat()" title="Neu starten"><i data-feather="refresh-ccw"></i></button>
     `;
-    chat.appendChild(wrapper);
+    messageDiv.parentNode.appendChild(feedbackDiv);
+    feather.replace();
+  }, 600); // Dauer der Tipp-Animation in Millisekunden
+}
 
     const target = wrapper.querySelector(`#${messageId}`);
     let i = 0;
