@@ -280,22 +280,36 @@
     cursor: pointer;
     padding: 0 12px;
     color: #444;
+
+    /* ✅ Fixiert den Button in der Ecke */
+    position: absolute;
+    top: 20px;
+    right: 16px;
+    z-index: 10000;
   }
 
   .chat-header {
     justify-content: space-between;
   }
 }
+
+/* ✅ Optional (Desktop-Absicherung) */
+@media (min-width: 769px) {
+  #chat-close {
+    display: none;
+  }
+}
+
   </style>
 </head>
 <body>
   <div id="chat-box">
     <div class="chat-header">
-      <div class="logo">
-         <button id="chat-close" onclick="closeChat()" style="display: none;">✕</button>
-        <img src="logo.png" alt="Logo" />
-        <span>unovam.de</span>
-      </div>
+    <div class="logo">
+    <img src="logo.png" alt="Logo" />
+    <span>unovam.de</span>
+    </div>
+    <button id="chat-close" onclick="closeChat()">✕</button>
       <div class="menu-wrapper">
         <div class="menu" onclick="toggleMenu()">
           <span>⋮</span>
@@ -448,7 +462,7 @@
         clearInterval(interval);
         feather.replace();
       }
-    }, 15);
+    }, 1);
   }
   function openChat() {
   if (window.innerWidth <= 768) {
@@ -465,7 +479,11 @@ function closeChat() {
     document.getElementById("chat-close").style.display = "none";
   }
 }
+    
 </script>
 <button id="open-chat" onclick="openChat()">💬</button>
+<script>
+  feather.replace();
+</script>
 </body>
 </html>
