@@ -99,7 +99,7 @@
       0% { transform: scale(0.9); opacity: 0; }
       100% { transform: scale(1); opacity: 1; }
     }
-    .logo-icon {
+   .logo-icon {
       width: 42px;
       height: 42px;
       background: white;
@@ -109,6 +109,8 @@
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
+      align-self: flex-end;     /* ← positioniert das Logo nach unten */
+      margin-bottom: 4px;       /* ← feintuning für vertikale Ausrichtung */
     }
     .logo-icon img {
       height: 42px;
@@ -134,7 +136,7 @@
     .bot-message {
       background: #f3f3f5;
       color: #444;
-      border-radius: 16px;
+      border-radius: 16px 16px 16px 4px; /* oben rechts, oben links, unten rechts, unten links */
     }
     .feedback {
       display: flex;
@@ -198,6 +200,45 @@
       color: #999;
       margin: 6px 0 6px 70px;
     }
+      .menu-dropdown button svg {
+      width: 16px;
+      height: 16px;
+    }
+    .menu-dropdown button svg {
+  width: 16px;
+  height: 16px;
+}
+/* NEU – Tipp-Animation */
+.typing {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  width: fit-content;
+  padding: 10px 14px;
+  border-radius: 16px 16px 16px 4px;
+  background: #f3f3f5;
+  color: #444;
+}
+
+.typing .dot {
+  height: 8px;
+  width: 8px;
+  background-color: #999;
+  border-radius: 50%;
+  animation: blink 1.4s infinite both;
+}
+
+.typing .dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.typing .dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0%, 80%, 100% { opacity: 0; }
+  40% { opacity: 1; }
+}
   </style>
 </head>
 <body>
@@ -249,10 +290,18 @@
       userMsg.textContent = frage;
       chat.appendChild(userMsg);
       inputField.value = "";
-      const loading = document.createElement("div");
-      loading.className = "loading";
-      loading.textContent = "Schreibt...";
-      chat.appendChild(loading);
+      const typingWrapper = document.createElement("div");
+      typingWrapper.className = "bot-message-wrapper";
+      typingWrapper.innerHTML = `
+      <div class="logo-icon">
+      <img src="logo.png" alt="UNOVAM" />
+      </div>
+      <div class="message bot-message typing">
+      <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      </div>
+      `;
+      chat.appendChild(typingWrapper);
+      chat.scrollTop = chat.scrollHeight;
       chat.scrollTop = chat.scrollHeight;
       try {
         const res = await fetch("https://unovam-chatbot.onrender.com/frage", {
@@ -262,7 +311,8 @@
         });
         const data = await res.json();
         loading.remove();
-        anzeigenAntwort(data.antwort);
+        typingWrapper.remove(); // Tippanimation entfernen
+        zeigeAntwortLangsam(data.antwort); // Antwort langsam anzeigen
       } catch (err) {
         loading.remove();
         anzeigenAntwort("❌ Fehler: " + err.message);
@@ -293,10 +343,20 @@
     }
 
     function copyMessage(button, id) {
-      const text = document.getElementById(id).textContent;
-      navigator.clipboard.writeText(text).then(() => {
-        button.classList.add('active');
-      });
+  const text = document.getElementById(id).textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    const icon = button.querySelector('i');
+    icon.setAttribute('data-feather', 'check');
+    feather.replace();
+    button.classList.add('active');
+
+    // Nach 2 Sekunden zurück zu "copy"
+    setTimeout(() => {
+      icon.setAttribute('data-feather', 'copy');
+      feather.replace();
+      button.classList.remove('active');
+    }, 2000);
+  });
     }
 
     function handleFeedback(messageId, type, button) {
@@ -311,6 +371,40 @@
     }
 
     neuerChat();
-  </script>
+    neuerChat();
+
+  function zeigeAntwortLangsam(text) {
+    const wrapper = document.createElement("div");
+    wrapper.className = "bot-message-wrapper";
+    const messageId = `msg-${Date.now()}`;
+    wrapper.innerHTML = `
+      <div class="logo-icon">
+        <img src="logo.png" alt="UNOVAM" />
+      </div>
+      <div>
+        <div class="message bot-message" id="${messageId}"></div>
+        <div class="feedback">
+          <button onclick="copyMessage(this, '${messageId}')" title="Kopieren"><i data-feather="copy"></i></button>
+          <button onclick="handleFeedback('${messageId}', 'up', this)" title="Gefällt mir"><i data-feather="thumbs-up"></i></button>
+          <button onclick="handleFeedback('${messageId}', 'down', this)" title="Gefällt mir nicht"><i data-feather="thumbs-down"></i></button>
+          <button onclick="neuerChat()" title="Neu starten"><i data-feather="refresh-ccw"></i></button>
+        </div>
+      </div>
+    `;
+    chat.appendChild(wrapper);
+
+    const target = wrapper.querySelector(`#${messageId}`);
+    let i = 0;
+    const interval = setInterval(() => {
+      target.textContent += text.charAt(i);
+      i++;
+      chat.scrollTop = chat.scrollHeight;
+      if (i >= text.length) {
+        clearInterval(interval);
+        feather.replace();
+      }
+    }, 15);
+  }
+</script>
 </body>
 </html>
