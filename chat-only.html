@@ -296,13 +296,21 @@
 /* ✅ Optional (Desktop-Absicherung) */
 @media (min-width: 769px) {
   #chat-close {
-    display: none;
+    display: !important;
   }
 }
 
   </style>
 </head>
 <body>
+<script>
+  if (window.innerWidth > 768) {
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("chat-box").style.display = "none";
+      document.getElementById("open-chat").style.display = "block";
+    });
+  }
+</script>
   <div id="chat-box">
     <div class="chat-header">
     <div class="logo">
@@ -431,7 +439,10 @@
     }
 
     neuerChat();
-
+    // Direkt anzeigen in Mobilansicht
+if (window.innerWidth <= 768) {
+  openChat();
+}
   function zeigeAntwortLangsam(text) {
     const wrapper = document.createElement("div");
     wrapper.className = "bot-message-wrapper";
@@ -468,7 +479,7 @@
   if (window.innerWidth <= 768) {
     document.getElementById("chat-box").style.display = "flex";
     document.getElementById("open-chat").style.display = "none";
-    document.getElementById("chat-close").style.display = "block";
+    document.getElementById("chat-close").style.display = "";
   }
 }
 
@@ -484,6 +495,16 @@ function closeChat() {
 <button id="open-chat" onclick="openChat()">💬</button>
 <script>
   feather.replace();
+
+  // Wenn Fenstergröße sich ändert und wieder groß wird (z. B. beim Drehen des Geräts)
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      document.getElementById("chat-box").style.display = "none";
+      document.getElementById("open-chat").style.display = "block";
+      document.getElementById("chat-close").style.display = "none";
+    }
+  });
 </script>
+
 </body>
 </html>
