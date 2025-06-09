@@ -11,10 +11,12 @@
 
     html, body {
       margin: 0;
+      padding: 0;
       height: 100%;
       font-family: 'Inter', sans-serif;
       background: #f9fafb;
       color: #444;
+      overflow: hidden;
     }
 
     #chat-box {
@@ -23,16 +25,18 @@
       display: flex;
       flex-direction: column;
       overflow: hidden;
+      position: relative;
     }
 
     .chat-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 8px;
+      padding: 8px 16px;
       border-bottom: 1px solid #eee;
       font-weight: 600;
       font-size: 14px;
+      position: relative;
     }
 
     .chat-header .logo {
@@ -48,27 +52,33 @@
       border-radius: 50%;
     }
 
-    .chat-header .menu {
+    .menu-wrapper {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+    }
+
+    .menu {
       font-size: 20px;
       cursor: pointer;
       position: relative;
     }
 
-    .chat-header .menu-dropdown {
+    .menu-dropdown {
       display: none;
       flex-direction: column;
       background: white;
       border: 1px solid #ddd;
       border-radius: 8px;
       position: absolute;
-      top: 30px;
+      top: 28px;
       right: 0;
       z-index: 1001;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       width: 210px;
     }
 
-    .chat-header .menu-dropdown button {
+    .menu-dropdown button {
       background: none;
       border: none;
       padding: 10px 16px;
@@ -107,27 +117,27 @@
 
     .bot-message-wrapper {
       display: flex;
-      align-items: flex-end;
+      align-items: flex-start;
       gap: 10px;
       margin: 6px 0;
     }
 
     .logo-icon {
-      width: 40px;
-      height: 40px;
+      width: 36px;
+      height: 36px;
       background: white;
       border-radius: 50%;
       overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-shrink: 0;
     }
 
     .logo-icon img {
       height: 30px;
       width: 30px;
-      object-fit: cover;
-      border-radius: 50%;
+      object-fit: contain;
     }
 
     .bot-message {
@@ -170,6 +180,9 @@
       padding: 12px 16px;
       border-top: 1px solid #ddd;
       background: #fff;
+      position: sticky;
+      bottom: 0;
+      z-index: 1000;
     }
 
     #input {
@@ -180,6 +193,7 @@
       background: transparent;
       outline: none;
       color: #444;
+      min-width: 0;
     }
 
     #input::placeholder {
@@ -193,6 +207,7 @@
       font-size: 20px;
       cursor: pointer;
       color: #3c3c3c;
+      flex-shrink: 0;
     }
 
     .loading {
@@ -203,16 +218,6 @@
     }
 
     @media (max-width: 768px) {
-      .chat-header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 8px;
-      }
-
-      .chat-header .logo span {
-        font-size: 14px;
-      }
-
       .message {
         font-size: 13px;
         padding: 10px 14px;
@@ -222,9 +227,8 @@
         font-size: 13px;
       }
 
-      .logo-icon {
-        width: 40px;
-        height: 40px;
+      .chat-header .logo span {
+        font-size: 14px;
       }
     }
   </style>
@@ -236,10 +240,12 @@
         <img src="logo.png" alt="Logo" />
         <span>unovam.de</span>
       </div>
-      <div class="menu" onclick="toggleMenu()">
-        <span>⋮</span>
-        <div class="menu-dropdown" id="menu-dropdown">
-          <button onclick="neuerChat()"><i data-feather="refresh-ccw"></i> Neuen Chat starten</button>
+      <div class="menu-wrapper">
+        <div class="menu" onclick="toggleMenu()">
+          <span>⋮</span>
+          <div class="menu-dropdown" id="menu-dropdown">
+            <button onclick="neuerChat()"><i data-feather="refresh-ccw"></i> Neuen Chat starten</button>
+          </div>
         </div>
       </div>
     </div>
@@ -263,7 +269,7 @@
 
     function neuerChat() {
       chat.innerHTML = '';
-      anzeigenAntwort("Guten Tag! Ich bin der digitale Assistent von UNOVAM. Gerne beantworte ich Ihre Fragen zu unseren Leistungen, Preisen oder Projektabläufen. Wie kann ich helfen?", true);
+      anzeigenAntwort("Guten Tag! Ich bin der digitale Assistent von UNOVAM. Gerne beantworte ich Ihre Fragen zu unseren Leistungen, Preisen oder Projektabläufen. Wie kann ich helfen?");
       menuDropdown.style.display = 'none';
     }
 
@@ -284,6 +290,7 @@
       loading.textContent = "Schreibt...";
       chat.appendChild(loading);
       chat.scrollTop = chat.scrollHeight;
+
       try {
         const res = await fetch("https://unovam-chatbot.onrender.com/frage", {
           method: "POST",
@@ -296,25 +303,23 @@
       } catch (err) {
         loading.remove();
         anzeigenAntwort("❌ Fehler: " + err.message);
-        console.error(err);
       }
     }
 
-    function anzeigenAntwort(text, isWelcome = false) {
+    function anzeigenAntwort(text) {
       const messageId = `msg-${Date.now()}`;
       const wrapper = document.createElement("div");
       wrapper.className = "bot-message-wrapper";
       wrapper.innerHTML = `
         <div class="logo-icon"><img src="logo.png" alt="UNOVAM" /></div>
         <div>
-          <div class="message bot-message ${isWelcome ? 'begrussung' : ''}" id="${messageId}">${text}</div>
-          ${!isWelcome ? `
+          <div class="message bot-message" id="${messageId}">${text}</div>
           <div class="feedback">
             <button onclick="copyMessage(this, '${messageId}')"><i data-feather="copy"></i></button>
             <button onclick="handleFeedback('${messageId}', 'up', this)"><i data-feather="thumbs-up"></i></button>
             <button onclick="handleFeedback('${messageId}', 'down', this)"><i data-feather="thumbs-down"></i></button>
             <button onclick="neuerChat()"><i data-feather="refresh-ccw"></i></button>
-          </div>` : ''}
+          </div>
         </div>
       `;
       chat.appendChild(wrapper);
