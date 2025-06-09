@@ -438,11 +438,6 @@
       }).catch(() => console.warn('Feedback konnte nicht gesendet werden.'));
     }
 
-    neuerChat();
-    // Direkt anzeigen in Mobilansicht
-if (window.innerWidth <= 768) {
-  openChat();
-}
   function zeigeAntwortLangsam(text) {
   const wrapper = document.createElement("div");
   wrapper.className = "bot-message-wrapper";
@@ -493,10 +488,13 @@ if (window.innerWidth <= 768) {
     }, 1);
   }
   function openChat() {
-  if (window.innerWidth <= 768) {
-    document.getElementById("chat-box").style.display = "flex";
-    document.getElementById("open-chat").style.display = "none";
-    document.getElementById("chat-close").style.display = "";
+  document.getElementById("chat-box").style.display = "flex";
+  document.getElementById("open-chat").style.display = "none";
+  document.getElementById("chat-close").style.display = "";
+
+  // Begrüßung direkt einfügen, nur wenn Chat leer ist
+  if (chat.children.length === 0) {
+    neuerChat();
   }
 }
 
