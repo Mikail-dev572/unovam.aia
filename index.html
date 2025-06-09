@@ -79,10 +79,11 @@
     }
 
     .chat-header .logo img {
-      height: 70px;
-      width: 70px;
-      object-fit: contain;
-    }
+  height: 36px;
+  width: 36px;
+  object-fit: cover;
+  border-radius: 50%;
+}
 
     .chat-header .menu {
       font-size: 20px;
@@ -329,7 +330,7 @@
       chat.appendChild(loading);
       chat.scrollTop = chat.scrollHeight;
       try {
-        const res = await fetch("/frage", {
+        const res = await fetch("https://unovam-chatbot.onrender.com/frage", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ frage })
