@@ -28,6 +28,19 @@
       position: relative;
     }
 
+      .bot-bubble-content {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+      .inline-logo {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
     .chat-header {
       display: flex;
       align-items: center;
@@ -311,16 +324,18 @@
       const wrapper = document.createElement("div");
       wrapper.className = "bot-message-wrapper";
       wrapper.innerHTML = `
-        <div class="logo-icon"><img src="logo.png" alt="UNOVAM" /></div>
-        <div>
-          <div class="message bot-message" id="${messageId}">${text}</div>
-          <div class="feedback">
-            <button onclick="copyMessage(this, '${messageId}')"><i data-feather="copy"></i></button>
-            <button onclick="handleFeedback('${messageId}', 'up', this)"><i data-feather="thumbs-up"></i></button>
-            <button onclick="handleFeedback('${messageId}', 'down', this)"><i data-feather="thumbs-down"></i></button>
-            <button onclick="neuerChat()"><i data-feather="refresh-ccw"></i></button>
-          </div>
-        </div>
+  <div class="message bot-message" id="${messageId}">
+    <div class="bot-bubble-content">
+      <img src="logo.png" alt="Logo" class="inline-logo" />
+      <span>${text}</span>
+    </div>
+  </div>
+  <div class="feedback">
+    <button onclick="copyMessage(this, '${messageId}')"><i data-feather="copy"></i></button>
+    <button onclick="handleFeedback('${messageId}', 'up', this)"><i data-feather="thumbs-up"></i></button>
+    <button onclick="handleFeedback('${messageId}', 'down', this)"><i data-feather="thumbs-down"></i></button>
+    <button onclick="neuerChat()"><i data-feather="refresh-ccw"></i></button>
+  </div>
       `;
       chat.appendChild(wrapper);
       feather.replace();
