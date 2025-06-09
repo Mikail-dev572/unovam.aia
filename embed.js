@@ -80,7 +80,7 @@
 
   const chatBox = document.createElement('iframe');
   chatBox.id = 'chat-box';
-  chatBox.src = 'https://unovam-chatbot.onrender.com?embedded=true';
+  chatBox.src = 'https://mikail-dev572.github.io/unovam.aia/chat-only.html'; // NEUER LINK
   chatBox.style.display = 'none';
 
   document.body.appendChild(toggleBtn);
@@ -101,6 +101,6 @@
     toggleBtn.setAttribute('aria-expanded', 'false');
   });
 
-  // 🔁 Chat direkt beim Laden öffnen
-  toggleBtn.click();
+  // ⛔️ WICHTIG: automatisches Öffnen deaktiviert
+  // toggleBtn.click(); ← diese Zeile wurde entfernt
 })();
