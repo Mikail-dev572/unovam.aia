@@ -8,7 +8,6 @@
   <script src="https://unpkg.com/feather-icons"></script>
   <style>
     * { box-sizing: border-box; }
-
     html, body {
       margin: 0;
       padding: 0;
@@ -18,7 +17,6 @@
       color: #444;
       overflow: hidden;
     }
-
     #chat-box {
       width: 100vw;
       height: 100vh;
@@ -27,56 +25,34 @@
       overflow: hidden;
       position: relative;
     }
-
-      .bot-bubble-content {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-      .inline-logo {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-
     .chat-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 8px 16px;
+      height: 72px;
+      padding: 0 20px;
       border-bottom: 1px solid #eee;
       font-weight: 600;
-      font-size: 14px;
-      position: relative;
+      font-size: 16px;
     }
-
     .chat-header .logo {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
-
     .chat-header .logo img {
-      height: 30px;
-      width: 30px;
+      height: 42px;
+      width: 42px;
       object-fit: cover;
       border-radius: 50%;
     }
-
     .menu-wrapper {
-      position: absolute;
-      top: 8px;
-      right: 12px;
+      position: relative;
     }
-
     .menu {
       font-size: 20px;
       cursor: pointer;
-      position: relative;
     }
-
     .menu-dropdown {
       display: none;
       flex-direction: column;
@@ -90,7 +66,6 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       width: 210px;
     }
-
     .menu-dropdown button {
       background: none;
       border: none;
@@ -100,8 +75,11 @@
       display: flex;
       align-items: center;
       gap: 8px;
+      transition: transform 0.2s ease;
     }
-
+    .menu-dropdown button:hover {
+      transform: scale(1.05);
+    }
     #chat {
       flex: 1;
       overflow-y: auto;
@@ -110,7 +88,34 @@
       flex-direction: column;
       scroll-behavior: smooth;
     }
-
+    .bot-message-wrapper {
+      display: flex;
+      align-items: flex-end;
+      gap: 10px;
+      margin: 6px 0;
+      animation: pop-in 0.3s ease forwards;
+    }
+    @keyframes pop-in {
+      0% { transform: scale(0.9); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      background: white;
+      border-radius: 50%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .logo-icon img {
+      height: 42px;
+      width: 42px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
     .message {
       max-width: 85%;
       padding: 14px 18px;
@@ -120,51 +125,22 @@
       line-height: 1.5;
       letter-spacing: 0.4px;
     }
-
     .user-message {
-      background: #007aff;
+      background: #000;
       color: white;
       align-self: flex-end;
       border-bottom-right-radius: 4px;
     }
-
-    .bot-message-wrapper {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      margin: 6px 0;
-    }
-
-    .logo-icon {
-      width: 36px;
-      height: 36px;
-      background: white;
-      border-radius: 50%;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .logo-icon img {
-      height: 36px;
-      width: 36px;
-      object-fit: contain;
-    }
-
     .bot-message {
       background: #f3f3f5;
       color: #444;
       border-radius: 16px;
     }
-
     .feedback {
       display: flex;
       gap: 4px;
       margin-left: 10px;
     }
-
     .feedback button {
       background: none;
       border: none;
@@ -176,18 +152,15 @@
       justify-content: center;
       cursor: pointer;
     }
-
     .feedback button svg {
       stroke: #888;
       width: 19px;
       height: 19px;
     }
-
     .feedback button.active svg {
       stroke: #444;
-      fill: #444;
+      fill: none;
     }
-
     #input-area {
       display: flex;
       padding: 12px 16px;
@@ -197,7 +170,6 @@
       bottom: 0;
       z-index: 1000;
     }
-
     #input {
       flex: 1;
       padding: 10px 12px;
@@ -208,11 +180,9 @@
       color: #444;
       min-width: 0;
     }
-
     #input::placeholder {
       color: #aaa;
     }
-
     .send {
       background: none;
       border: none;
@@ -222,27 +192,11 @@
       color: #3c3c3c;
       flex-shrink: 0;
     }
-
     .loading {
       font-style: italic;
       font-size: 13px;
       color: #999;
       margin: 6px 0 6px 70px;
-    }
-
-    @media (max-width: 768px) {
-      .message {
-        font-size: 13px;
-        padding: 10px 14px;
-      }
-
-      #input {
-        font-size: 13px;
-      }
-
-      .chat-header .logo span {
-        font-size: 14px;
-      }
     }
   </style>
 </head>
@@ -262,15 +216,12 @@
         </div>
       </div>
     </div>
-
     <div id="chat"></div>
-
     <div id="input-area">
       <input id="input" placeholder="Nachricht eingeben..." />
       <button class="send" onclick="senden()">&#10148;</button>
     </div>
   </div>
-
   <script>
     const inputField = document.getElementById("input");
     const chat = document.getElementById("chat");
@@ -303,7 +254,6 @@
       loading.textContent = "Schreibt...";
       chat.appendChild(loading);
       chat.scrollTop = chat.scrollHeight;
-
       try {
         const res = await fetch("https://unovam-chatbot.onrender.com/frage", {
           method: "POST",
@@ -324,46 +274,40 @@
       const wrapper = document.createElement("div");
       wrapper.className = "bot-message-wrapper";
       wrapper.innerHTML = `
-  <div class="message bot-message" id="${messageId}">
-    <div class="bot-bubble-content">
-      <img src="logo.png" alt="Logo" class="inline-logo" />
-      <span>${text}</span>
-    </div>
-  </div>
-  <div class="feedback">
-    <button onclick="copyMessage(this, '${messageId}')"><i data-feather="copy"></i></button>
-    <button onclick="handleFeedback('${messageId}', 'up', this)"><i data-feather="thumbs-up"></i></button>
-    <button onclick="handleFeedback('${messageId}', 'down', this)"><i data-feather="thumbs-down"></i></button>
-    <button onclick="neuerChat()"><i data-feather="refresh-ccw"></i></button>
-  </div>
+        <div class="logo-icon">
+          <img src="logo.png" alt="UNOVAM" />
+        </div>
+        <div>
+          <div class="message bot-message" id="${messageId}">${text}</div>
+          <div class="feedback">
+            <button onclick="copyMessage(this, '${messageId}')" title="Kopieren"><i data-feather="copy"></i></button>
+            <button onclick="handleFeedback('${messageId}', 'up', this)" title="Gefällt mir"><i data-feather="thumbs-up"></i></button>
+            <button onclick="handleFeedback('${messageId}', 'down', this)" title="Gefällt mir nicht"><i data-feather="thumbs-down"></i></button>
+            <button onclick="neuerChat()" title="Neu starten"><i data-feather="refresh-ccw"></i></button>
+          </div>
+        </div>
       `;
       chat.appendChild(wrapper);
       feather.replace();
       chat.scrollTop = chat.scrollHeight;
     }
 
+    function copyMessage(button, id) {
+      const text = document.getElementById(id).textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        button.classList.add('active');
+      });
+    }
+
     function handleFeedback(messageId, type, button) {
-      toggleActive(button);
+      const buttons = button.parentNode.querySelectorAll('button');
+      buttons.forEach(b => b.classList.remove('active'));
+      button.classList.add('active');
       fetch('/feedback', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ messageId, type })
       }).catch(() => console.warn('Feedback konnte nicht gesendet werden.'));
-    }
-
-    function copyMessage(button, id) {
-      const text = document.getElementById(id).textContent;
-      navigator.clipboard.writeText(text).then(() => {
-        button.innerHTML = '<i data-feather="check"></i>';
-        feather.replace();
-        button.classList.add('active');
-      });
-    }
-
-    function toggleActive(btn) {
-      const buttons = btn.parentNode.querySelectorAll('button');
-      buttons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
     }
 
     neuerChat();
