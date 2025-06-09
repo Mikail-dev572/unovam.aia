@@ -343,7 +343,7 @@
         anzeigenAntwort(data.antwort);
       } catch (err) {
         loading.remove();
-        anzeigenAntwort("❌ Entschuldigung, ein Fehler ist aufgetreten.");
+        anzeigenAntwort("❌ Fehler: " + err.message);
       }
     }
 
