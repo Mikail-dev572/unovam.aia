@@ -30,8 +30,8 @@ app.post("/frage", async (req, res) => {
 
     res.json({ antwort: antwort.choices[0].message.content });
   } catch (error) {
-    console.error("Fehler:", error);
-    res.status(500).json({ antwort: "Es gab ein Problem mit der Antwort." });
+  console.error("Fehler im /frage-Handler:", error);
+  res.status(500).json({ antwort: "Fehler: " + error.message });
   }
 });
 
