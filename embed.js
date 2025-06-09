@@ -1,4 +1,7 @@
 (function () {
+  // Nur auf Hauptseite ausführen, NICHT im eingebetteten iFrame
+  if (window.location.search.includes('embedded=true')) return;
+
   const css = `
     * { box-sizing: border-box; }
     body {
@@ -31,8 +34,10 @@
       position: fixed;
       bottom: 90px;
       right: 24px;
-      width: 460px;
-      height: 600px;
+      width: 420px;
+      height: 620px;
+      max-width: 90%;
+      max-height: 90%;
       background: white;
       border-radius: 16px;
       box-shadow: 0 8px 30px rgba(0,0,0,0.25);
@@ -40,13 +45,6 @@
       flex-direction: column;
       overflow: hidden;
       z-index: 999;
-    }
-    @media (max-width: 500px) {
-      #chat-box {
-        width: 90%;
-        height: 90%;
-        right: 5%;
-      }
     }
   `;
 
@@ -67,7 +65,7 @@
 
   const chatBox = document.createElement('iframe');
   chatBox.id = 'chat-box';
-  chatBox.src = 'https://unovam-chatbot.onrender.com';
+  chatBox.src = 'https://unovam-chatbot.onrender.com?embedded=true';
   chatBox.style.display = 'none';
 
   document.body.appendChild(toggleBtn);
