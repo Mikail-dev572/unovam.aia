@@ -8,6 +8,7 @@
   <script src="https://unpkg.com/feather-icons"></script>
   <style>
     * { box-sizing: border-box; }
+
     html, body {
       margin: 0;
       height: 100%;
@@ -28,7 +29,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 4px;
+      padding: 8px;
       border-bottom: 1px solid #eee;
       font-weight: 600;
       font-size: 14px;
@@ -40,22 +41,17 @@
       gap: 8px;
     }
 
-    .chat-header .logo-icon img {
-  height: 30px;
-  width: 30px;
-  object-fit: cover;
-  border-radius: 50%;
-}
+    .chat-header .logo img {
+      height: 30px;
+      width: 30px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
 
     .chat-header .menu {
       font-size: 20px;
       cursor: pointer;
       position: relative;
-    }
-
-    .chat-header .menu span {
-      font-size: 18px;
-      padding: 4px 8px;
     }
 
     .chat-header .menu-dropdown {
@@ -81,13 +77,6 @@
       display: flex;
       align-items: center;
       gap: 8px;
-    }
-
-    .chat-header .menu-dropdown button svg {
-      width: 12px;
-      height: 10px;
-      stroke: #444;
-      vertical-align: middle;
     }
 
     #chat {
@@ -124,19 +113,22 @@
     }
 
     .logo-icon {
-      width: 60px;
+      width: 40px;
+      height: 40px;
+      background: white;
+      border-radius: 50%;
+      overflow: hidden;
       display: flex;
-      align-items: flex-end;
+      align-items: center;
       justify-content: center;
-      padding-bottom: 6px;
     }
 
     .logo-icon img {
-  height: 30px;
-  width: 30px;
-  object-fit: cover;
-  border-radius: 50%;
-}
+      height: 30px;
+      width: 30px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
 
     .bot-message {
       background: #f3f3f5;
@@ -147,7 +139,6 @@
     .feedback {
       display: flex;
       gap: 4px;
-      padding-left: 0;
       margin-left: 10px;
     }
 
@@ -209,6 +200,32 @@
       font-size: 13px;
       color: #999;
       margin: 6px 0 6px 70px;
+    }
+
+    @media (max-width: 768px) {
+      .chat-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px;
+      }
+
+      .chat-header .logo span {
+        font-size: 14px;
+      }
+
+      .message {
+        font-size: 13px;
+        padding: 10px 14px;
+      }
+
+      #input {
+        font-size: 13px;
+      }
+
+      .logo-icon {
+        width: 40px;
+        height: 40px;
+      }
     }
   </style>
 </head>
