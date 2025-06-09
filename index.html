@@ -8,6 +8,7 @@
   <script src="https://unpkg.com/feather-icons"></script>
   <style>
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
@@ -31,12 +32,14 @@
       justify-content: center;
       background: #1a1a1a;
     }
+
     #chat-toggle svg,
     #chat-close svg {
       width: 28px;
       height: 28px;
       stroke: white;
     }
+
     #chat-close { display: none; }
 
     #chat-box {
@@ -54,19 +57,11 @@
       z-index: 999;
     }
 
-    @media (max-width: 500px) {
-      #chat-box {
-        width: 90%;
-        height: 90%;
-        right: 5%;
-      }
-    }
-
     .chat-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 4px;
+      padding: 8px;
       border-bottom: 1px solid #eee;
       font-weight: 600;
       font-size: 14px;
@@ -78,22 +73,18 @@
       gap: 8px;
     }
 
-    .chat-header .logo img {
-  height: 30px;
-  width: 30px;
-  object-fit: cover;
-  border-radius: 50%;
-}
+    .chat-header .logo img,
+    .logo-icon img {
+      height: 30px;
+      width: 30px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
 
     .chat-header .menu {
       font-size: 20px;
       cursor: pointer;
       position: relative;
-    }
-
-    .chat-header .menu span {
-      font-size: 18px;
-      padding: 4px 8px;
     }
 
     .chat-header .menu-dropdown {
@@ -119,13 +110,6 @@
       display: flex;
       align-items: center;
       gap: 8px;
-    }
-
-    .chat-header .menu-dropdown button svg {
-      width: 12px;
-      height: 10px;
-      stroke: #444;
-      vertical-align: middle;
     }
 
     #chat {
@@ -162,24 +146,20 @@
     }
 
     .logo-icon {
-      width: 60px;
+      width: 40px;
+      height: 40px;
+      background: white;
+      border-radius: 50%;
+      overflow: hidden;
       display: flex;
-      align-items: flex-end;
+      align-items: center;
       justify-content: center;
-      padding-bottom: 6px;
+      padding: 0;
     }
-
-    .logo-icon img {
-  height: 30px;
-  width: 30px;
-  object-fit: cover;
-  border-radius: 50%;
-}
 
     .feedback {
       display: flex;
       gap: 4px;
-      padding-left: 0;
       margin-left: 10px;
     }
 
@@ -241,6 +221,34 @@
       font-size: 13px;
       color: #999;
       margin: 6px 0 6px 70px;
+    }
+
+    @media (max-width: 768px) {
+      #chat-box {
+        width: 90%;
+        height: 90%;
+        right: 5%;
+        bottom: 5%;
+      }
+
+      .chat-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px;
+      }
+
+      .chat-header .logo span {
+        font-size: 14px;
+      }
+
+      .message {
+        font-size: 13px;
+        padding: 10px 14px;
+      }
+
+      #input {
+        font-size: 13px;
+      }
     }
   </style>
 </head>
@@ -385,12 +393,13 @@
       });
     }
   </script>
-<script>
-  if (!window.location.search.includes('embedded=true')) {
-    const script = document.createElement('script');
-    script.src = "/embed.js";
-    document.body.appendChild(script);
-  }
-</script>
+
+  <script>
+    if (!window.location.search.includes('embedded=true')) {
+      const script = document.createElement('script');
+      script.src = "/embed.js";
+      document.body.appendChild(script);
+    }
+  </script>
 </body>
 </html>
