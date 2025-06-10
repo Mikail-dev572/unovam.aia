@@ -234,7 +234,33 @@
     }
     .feedback button.active svg {
   stroke: #000;
+  fill: #000;   
+}
+    .feedback button i[data-feather="check"] {
+  width: 14px;
+  height: 14px;
+  stroke-width: 2;
+  vertical-align: middle;
+  transform: translateY(0.5px); /* optional: leichtes optisches Ausrichten */
+}
+   /* Allgemein: Feather-Icons auf Schwarz */
+button i[data-feather],
+.menu-dropdown i[data-feather],
+.feedback button i[data-feather] {
+  color: #000;
+  stroke: #000;
+  fill: none;
+}
+
+/* Falls aktiv: auch gefüllte Icons (z. B. bei Klick) */
+.feedback button.active svg {
+  stroke: #000;
   fill: #000;
+}
+
+/* Sicherstellen, dass Texte im Menü nicht blau werden */
+.menu-dropdown button {
+  color: #000;
 }
   </style>
 </head>
