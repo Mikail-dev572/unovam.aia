@@ -91,9 +91,12 @@
 
     .menu-dropdown button i[data-feather],
     .feedback button i[data-feather] {
-      width: 16px;
-      height: 16px;
+      width: 12px;
+      height: 12px;
       stroke-width: 2;
+      stroke: #888;
+      fill: none;
+      transition: stroke 0.2s ease;
     }
 
     #chat {
@@ -170,12 +173,13 @@
       cursor: pointer;
     }
 
-    .feedback button.active svg {
+    .feedback button.active i[data-feather] {
       stroke: #333;
     }
 
     #input-area {
       display: flex;
+      align-items: center;
       padding: 12px 16px;
       border-top: 1px solid #ddd;
       background: #fff;
@@ -183,6 +187,7 @@
 
     #input {
       flex: 1;
+      min-width: 0;
       padding: 10px 12px;
       border: none;
       font-size: 14px;
@@ -194,10 +199,11 @@
     .send {
       background: none;
       border: none;
-      margin-left: 8px;
       font-size: 20px;
+      margin-left: 8px;
       cursor: pointer;
       color: #3c3c3c;
+      flex-shrink: 0;
     }
 
     .typing {
@@ -331,12 +337,12 @@
       navigator.clipboard.writeText(text).then(() => {
         const icon = button.querySelector('i');
         icon.setAttribute('data-feather', 'check');
-        button.classList.add('active');
         feather.replace();
+        button.classList.add('active');
         setTimeout(() => {
           icon.setAttribute('data-feather', 'copy');
-          button.classList.remove('active');
           feather.replace();
+          button.classList.remove('active');
         }, 2000);
       });
     }
