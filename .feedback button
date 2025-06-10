@@ -365,7 +365,7 @@ button i[data-feather],
     function copyMessage(button, id) {
       const text = document.getElementById(id).textContent;
      navigator.clipboard.writeText(text).then(() => {
-        button.innerHTML = '<i data-feather="check"></i>';
+        button.innerHTML = '<i data-feather="check-circle"></i>';
         feather.replace();
   
         button.classList.add('active');
