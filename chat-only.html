@@ -61,6 +61,8 @@
       font-size: 20px;
       cursor: pointer;
       color: #333;
+      background: none;
+      border: none;
     }
 
     .menu-dropdown {
@@ -90,8 +92,8 @@
     }
 
     .menu-dropdown i[data-feather] {
-      width: 10px !important;
-      height: 10px !important;
+      width: 14px;
+      height: 14px;
     }
 
     #chat {
@@ -169,7 +171,7 @@
     }
 
     .feedback button.active i[data-feather] {
-      stroke: #333 !important;
+      stroke: #222;
     }
 
     #input-area {
@@ -200,6 +202,8 @@
       color: #3c3c3c;
       flex-shrink: 0;
       display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .typing {
@@ -231,13 +235,16 @@
 
     @media (max-width: 600px) {
       .feedback button i[data-feather] {
-        stroke: #444 !important;
+        stroke: #000 !important;
       }
+
       .menu-dropdown button {
         color: #000 !important;
       }
+
       .send {
-        font-size: 22px;
+        font-size: 24px;
+        display: flex;
       }
     }
   </style>
@@ -250,7 +257,7 @@
         <span>unovam.de</span>
       </div>
       <div class="menu-wrapper">
-        <div class="menu" onclick="toggleMenu()">⋮</div>
+        <button class="menu" onclick="toggleMenu()">⋮</button>
         <div class="menu-dropdown" id="menu-dropdown">
           <button onclick="neuerChat()"><i data-feather="refresh-ccw"></i> Neuen Chat starten</button>
         </div>
@@ -270,6 +277,12 @@
 
     document.addEventListener("DOMContentLoaded", () => {
       neuerChat();
+    });
+
+    document.addEventListener("click", function(event) {
+      if (!event.target.closest('.menu-wrapper')) {
+        menuDropdown.style.display = 'none';
+      }
     });
 
     function toggleMenu() {
@@ -314,11 +327,17 @@
         });
         const data = await res.json();
         typingWrapper.remove();
-        anzeigenAntwort(data.antwort);
+        if (data && data.antwort) {
+          anzeigenAntwort(data.antwort);
+        } else {
+          anzeigenAntwort("❌ Unerwartete Antwort vom Server.");
+        }
       } catch (err) {
         typingWrapper.remove();
         anzeigenAntwort("❌ Fehler: " + err.message);
       }
+
+      chat.scrollTop = chat.scrollHeight;
     }
 
     function anzeigenAntwort(text) {
