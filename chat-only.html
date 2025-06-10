@@ -15,16 +15,20 @@
       font-family: 'Inter', sans-serif;
       background: #f9fafb;
       color: #444;
-      overflow: hidden;
     }
+
     #chat-box {
+      display: none;
+      flex-direction: column;
       width: 100vw;
       height: 100vh;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      position: relative;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: white;
+      z-index: 9999;
     }
+
     .chat-header {
       display: flex;
       align-items: center;
@@ -34,25 +38,32 @@
       border-bottom: 1px solid #eee;
       font-weight: 600;
       font-size: 16px;
+      position: relative;
     }
+
     .chat-header .logo {
       display: flex;
       align-items: center;
       gap: 10px;
     }
+
     .chat-header .logo img {
       height: 42px;
       width: 42px;
       object-fit: cover;
       border-radius: 50%;
     }
+
     .menu-wrapper {
       position: relative;
+      margin-right: 8px;
     }
+
     .menu {
       font-size: 20px;
       cursor: pointer;
     }
+
     .menu-dropdown {
       display: none;
       flex-direction: column;
@@ -66,6 +77,7 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       width: 210px;
     }
+
     .menu-dropdown button {
       background: none;
       border: none;
@@ -75,31 +87,24 @@
       display: flex;
       align-items: center;
       gap: 8px;
-      transition: transform 0.2s ease;
     }
-    .menu-dropdown button:hover {
-      transform: scale(1.05);
-    }
+
     #chat {
       flex: 1;
       overflow-y: auto;
       padding: 16px;
       display: flex;
       flex-direction: column;
-      scroll-behavior: smooth;
     }
+
     .bot-message-wrapper {
       display: flex;
       align-items: flex-end;
       gap: 10px;
       margin: 6px 0;
-      animation: pop-in 0.3s ease forwards;
     }
-    @keyframes pop-in {
-      0% { transform: scale(0.9); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
-    }
-   .logo-icon {
+
+    .logo-icon {
       width: 42px;
       height: 42px;
       background: white;
@@ -109,15 +114,15 @@
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      align-self: flex-end;     /* ← positioniert das Logo nach unten */
-      margin-bottom: 4px;       /* ← feintuning für vertikale Ausrichtung */
     }
+
     .logo-icon img {
       height: 42px;
       width: 42px;
       object-fit: cover;
       border-radius: 50%;
     }
+
     .message {
       max-width: 85%;
       padding: 14px 18px;
@@ -125,24 +130,27 @@
       border-radius: 18px;
       font-size: 14px;
       line-height: 1.5;
-      letter-spacing: 0.4px;
     }
+
     .user-message {
       background: #000;
       color: white;
       align-self: flex-end;
       border-bottom-right-radius: 4px;
     }
+
     .bot-message {
       background: #f3f3f5;
       color: #444;
-      border-radius: 16px 16px 16px 4px; /* oben rechts, oben links, unten rechts, unten links */
+      border-radius: 16px 16px 16px 4px;
     }
+
     .feedback {
       display: flex;
       gap: 4px;
       margin-left: 10px;
     }
+
     .feedback button {
       background: none;
       border: none;
@@ -154,24 +162,20 @@
       justify-content: center;
       cursor: pointer;
     }
+
     .feedback button svg {
       stroke: #888;
       width: 19px;
       height: 19px;
     }
-    .feedback button.active svg {
-      stroke: #888;
-      fill: none;
-    }
+
     #input-area {
       display: flex;
       padding: 12px 16px;
       border-top: 1px solid #ddd;
       background: #fff;
-      position: sticky;
-      bottom: 0;
-      z-index: 1000;
     }
+
     #input {
       flex: 1;
       padding: 10px 12px;
@@ -180,11 +184,8 @@
       background: transparent;
       outline: none;
       color: #444;
-      min-width: 0;
     }
-    #input::placeholder {
-      color: #aaa;
-    }
+
     .send {
       background: none;
       border: none;
@@ -192,143 +193,93 @@
       font-size: 20px;
       cursor: pointer;
       color: #3c3c3c;
-      flex-shrink: 0;
     }
-    .loading {
-      font-style: italic;
-      font-size: 13px;
-      color: #999;
-      margin: 6px 0 6px 70px;
+
+    #open-chat {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 56px;
+      height: 56px;
+      background: #000;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 99999;
     }
-      .menu-dropdown button svg {
-      width: 16px;
-      height: 16px;
+
+    #chat-close {
+      display: none;
+      position: absolute;
+      right: 60px;
+      top: 20px;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #444;
     }
-    .menu-dropdown button svg {
-  width: 16px;
-  height: 16px;
-}
-/* NEU – Tipp-Animation */
-.typing {
-  display: flex;
-  gap: 4px;
-  align-items: center;
-  width: fit-content;
-  min-height: 24px;
-  padding: 10px 14px;
-  border-radius: 16px 16px 16px 4px;
-  background: #f3f3f5;
-  color: #444;
-}
 
-.typing .dot {
-  height: 8px;
-  width: 8px;
-  background-color: #999;
-  border-radius: 50%;
-  animation: blink 1.4s infinite both;
-}
+    .typing {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      width: fit-content;
+      padding: 10px 14px;
+      border-radius: 16px 16px 16px 4px;
+      background: #f3f3f5;
+      color: #444;
+    }
 
-.typing .dot:nth-child(2) {
-  animation-delay: 0.2s;
-}
-.typing .dot:nth-child(3) {
-  animation-delay: 0.4s;
-}
+    .typing .dot {
+      height: 8px;
+      width: 8px;
+      background-color: #999;
+      border-radius: 50%;
+      animation: blink 1.4s infinite both;
+    }
 
-@keyframes blink {
-  0%, 80%, 100% { opacity: 0; }
-  40% { opacity: 1; }
-}
-  @media (max-width: 768px) {
-  #chat-box {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100dvh;
-    width: 100vw;
-    z-index: 9999;
-    background: white;
-    flex-direction: column;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
+    .typing .dot:nth-child(2) { animation-delay: 0.2s; }
+    .typing .dot:nth-child(3) { animation-delay: 0.4s; }
 
-  #open-chat {
-    display: block;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 56px;
-    height: 56px;
-    background: #000;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 99999;
-  }
+    @keyframes blink {
+      0%, 80%, 100% { opacity: 0; }
+      40% { opacity: 1; }
+    }
 
-  #chat-close {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0 12px;
-    color: #444;
+    @media (max-width: 768px) {
+      #chat-close {
+        display: flex;
+      }
 
-    /* ✅ Fixiert den Button in der Ecke */
-    position: absolute;
-    top: 20px;
-    right: 16px;
-    z-index: 10000;
-  }
+      .menu-wrapper {
+        margin-right: 12px;
+      }
+    }
 
-  .chat-header {
-    justify-content: space-between;
-  }
-}
-
-/* ✅ Optional (Desktop-Absicherung) */
-@media (min-width: 769px) {
-  #chat-close {
-    display: none !important;
-  }
-}
-
+    @media (min-width: 769px) {
+      #chat-close {
+        display: none !important;
+      }
+    }
   </style>
 </head>
 <body>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-  if (window.innerWidth <= 768) {
-    document.getElementById("chat-box").style.display = "none";
-    document.getElementById("open-chat").style.display = "block";
-  } else {
-    document.getElementById("chat-box").style.display = "flex";
-    document.getElementById("open-chat").style.display = "none";
-    document.getElementById("chat-close").style.display = "none";
-    neuerChat(); // Chat direkt starten, wenn leer
-  }
-});
-</script>
+  <button id="open-chat" onclick="toggleChat()">💬</button>
+
   <div id="chat-box">
     <div class="chat-header">
-    <div class="logo">
-    <img src="logo.png" alt="Logo" />
-    <span>unovam.de</span>
-    </div>
-    <button id="chat-close" onclick="closeChat()">✕</button>
+      <div class="logo">
+        <img src="logo.png" alt="Logo" />
+        <span>unovam.de</span>
+      </div>
+      <button id="chat-close" onclick="toggleChat()">✕</button>
       <div class="menu-wrapper">
-        <div class="menu" onclick="toggleMenu()">
-          <span>⋮</span>
-          <div class="menu-dropdown" id="menu-dropdown">
-            <button onclick="neuerChat()"><i data-feather="refresh-ccw"></i> Neuen Chat starten</button>
-          </div>
+        <div class="menu" onclick="toggleMenu()">⋮</div>
+        <div class="menu-dropdown" id="menu-dropdown">
+          <button onclick="neuerChat()"><i data-feather="refresh-ccw"></i> Neuen Chat starten</button>
         </div>
       </div>
     </div>
@@ -338,10 +289,30 @@
       <button class="send" onclick="senden()">&#10148;</button>
     </div>
   </div>
+
   <script>
-    const inputField = document.getElementById("input");
+    const chatBox = document.getElementById("chat-box");
+    const openButton = document.getElementById("open-chat");
+    const closeButton = document.getElementById("chat-close");
     const chat = document.getElementById("chat");
+    const inputField = document.getElementById("input");
     const menuDropdown = document.getElementById("menu-dropdown");
+
+    document.addEventListener("DOMContentLoaded", () => {
+      openButton.style.display = "block";
+      chatBox.style.display = "none";
+    });
+
+    function toggleChat() {
+      const isOpen = chatBox.style.display === "flex";
+      chatBox.style.display = isOpen ? "none" : "flex";
+      openButton.style.display = isOpen ? "block" : "none";
+      closeButton.style.display = window.innerWidth <= 768 && !isOpen ? "flex" : "none";
+
+      if (!isOpen && chat.children.length === 0) {
+        neuerChat();
+      }
+    }
 
     function toggleMenu() {
       menuDropdown.style.display = menuDropdown.style.display === 'flex' ? 'none' : 'flex';
@@ -349,7 +320,7 @@
 
     function neuerChat() {
       chat.innerHTML = '';
-      anzeigenAntwort("Guten Tag! Ich bin der digitale Assistent von UNOVAM. Gerne beantworte ich Ihre Fragen zu unseren Leistungen, Preisen oder Projektabläufen. Wie kann ich helfen?");
+      anzeigenAntwort("Guten Tag! Ich bin der digitale Assistent von UNOVAM. Wie kann ich helfen?");
       menuDropdown.style.display = 'none';
     }
 
@@ -360,23 +331,23 @@
     async function senden() {
       const frage = inputField.value.trim();
       if (!frage) return;
+
       const userMsg = document.createElement("div");
       userMsg.className = "message user-message";
       userMsg.textContent = frage;
       chat.appendChild(userMsg);
       inputField.value = "";
+
       const typingWrapper = document.createElement("div");
       typingWrapper.className = "bot-message-wrapper";
       typingWrapper.innerHTML = `
-      <div class="logo-icon">
-      <img src="logo.png" alt="UNOVAM" />
-      </div>
-      <div class="message bot-message typing">
-      <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-      </div>
-      `;
+        <div class="logo-icon"><img src="logo.png" alt="UNOVAM" /></div>
+        <div class="message bot-message typing">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        </div>`;
       chat.appendChild(typingWrapper);
       chat.scrollTop = chat.scrollHeight;
+
       try {
         const res = await fetch("https://unovam-chatbot.onrender.com/frage", {
           method: "POST",
@@ -385,7 +356,7 @@
         });
         const data = await res.json();
         typingWrapper.remove();
-        zeigeAntwortLangsam(data.antwort);
+        anzeigenAntwort(data.antwort);
       } catch (err) {
         typingWrapper.remove();
         anzeigenAntwort("❌ Fehler: " + err.message);
@@ -393,138 +364,37 @@
     }
 
     function anzeigenAntwort(text) {
-      const messageId = `msg-${Date.now()}`;
       const wrapper = document.createElement("div");
       wrapper.className = "bot-message-wrapper";
+      const messageId = "msg-" + Date.now();
       wrapper.innerHTML = `
-        <div class="logo-icon">
-          <img src="logo.png" alt="UNOVAM" />
-        </div>
+        <div class="logo-icon"><img src="logo.png" alt="UNOVAM" /></div>
         <div>
           <div class="message bot-message" id="${messageId}">${text}</div>
           <div class="feedback">
             <button onclick="copyMessage(this, '${messageId}')" title="Kopieren"><i data-feather="copy"></i></button>
-            <button onclick="handleFeedback('${messageId}', 'up', this)" title="Gefällt mir"><i data-feather="thumbs-up"></i></button>
-            <button onclick="handleFeedback('${messageId}', 'down', this)" title="Gefällt mir nicht"><i data-feather="thumbs-down"></i></button>
             <button onclick="neuerChat()" title="Neu starten"><i data-feather="refresh-ccw"></i></button>
           </div>
-        </div>
-      `;
+        </div>`;
       chat.appendChild(wrapper);
       feather.replace();
       chat.scrollTop = chat.scrollHeight;
     }
 
     function copyMessage(button, id) {
-  const text = document.getElementById(id).textContent;
-  navigator.clipboard.writeText(text).then(() => {
-    const icon = button.querySelector('i');
-    icon.setAttribute('data-feather', 'check');
-    feather.replace();
-    button.classList.add('active');
-
-    // Nach 2 Sekunden zurück zu "copy"
-    setTimeout(() => {
-      icon.setAttribute('data-feather', 'copy');
-      feather.replace();
-      button.classList.remove('active');
-    }, 2000);
-  });
-    }
-
-    function handleFeedback(messageId, type, button) {
-      const buttons = button.parentNode.querySelectorAll('button');
-      buttons.forEach(b => b.classList.remove('active'));
-      button.classList.add('active');
-      fetch('/feedback', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ messageId, type })
-      }).catch(() => console.warn('Feedback konnte nicht gesendet werden.'));
-    }
-
-  function zeigeAntwortLangsam(text) {
-  const wrapper = document.createElement("div");
-  wrapper.className = "bot-message-wrapper";
-  const messageId = `msg-${Date.now()}`;
-
-  // Animation einfügen
-  wrapper.innerHTML = `
-    <div class="logo-icon">
-      <img src="logo.png" alt="UNOVAM" />
-    </div>
-    <div class="message bot-message typing" id="${messageId}">
-      <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-    </div>
-  `;
-  chat.appendChild(wrapper);
-  chat.scrollTop = chat.scrollHeight;
-
-  // Nach kurzer Zeit: Nachricht sofort anzeigen
-  setTimeout(() => {
-    const messageDiv = document.getElementById(messageId);
-    messageDiv.classList.remove("typing");
-    messageDiv.innerHTML = text;
-
-    // Feedback-Buttons anhängen
-    const feedbackDiv = document.createElement("div");
-    feedbackDiv.className = "feedback";
-    feedbackDiv.innerHTML = `
-      <button onclick="copyMessage(this, '${messageId}')" title="Kopieren"><i data-feather="copy"></i></button>
-      <button onclick="handleFeedback('${messageId}', 'up', this)" title="Gefällt mir"><i data-feather="thumbs-up"></i></button>
-      <button onclick="handleFeedback('${messageId}', 'down', this)" title="Gefällt mir nicht"><i data-feather="thumbs-down"></i></button>
-      <button onclick="neuerChat()" title="Neu starten"><i data-feather="refresh-ccw"></i></button>
-    `;
-    messageDiv.parentNode.appendChild(feedbackDiv);
-    feather.replace();
-  }, 600); // Dauer der Tipp-Animation in Millisekunden
-}
-
-    const target = wrapper.querySelector(`#${messageId}`);
-    let i = 0;
-    const interval = setInterval(() => {
-      target.textContent += text.charAt(i);
-      i++;
-      chat.scrollTop = chat.scrollHeight;
-      if (i >= text.length) {
-        clearInterval(interval);
+      const text = document.getElementById(id).textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        const icon = button.querySelector('i');
+        icon.setAttribute('data-feather', 'check');
         feather.replace();
-      }
-    }, 1);
-  }
-  function openChat() {
-  document.getElementById("chat-box").style.display = "flex";
-  document.getElementById("open-chat").style.display = "none";
-  document.getElementById("chat-close").style.display = "";
-
-  // Begrüßung direkt einfügen, nur wenn Chat leer ist
-  if (chat.children.length === 0) {
-    neuerChat();
-  }
-}
-
-function closeChat() {
-  if (window.innerWidth <= 768) {
-    document.getElementById("chat-box").style.display = "none";
-    document.getElementById("open-chat").style.display = "block";
-    document.getElementById("chat-close").style.display = "none";
-  }
-}
-    
-</script>
-<button id="open-chat" onclick="openChat()" style="display: none;">💬</button>
-<script>
-  feather.replace();
-
-  // Wenn Fenstergröße sich ändert und wieder groß wird (z. B. beim Drehen des Geräts)
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 768) {
-      document.getElementById("chat-box").style.display = "none";
-      document.getElementById("open-chat").style.display = "block";
-      document.getElementById("chat-close").style.display = "none";
+        setTimeout(() => {
+          icon.setAttribute('data-feather', 'copy');
+          feather.replace();
+        }, 2000);
+      });
     }
-  });
-</script>
 
+    feather.replace();
+  </script>
 </body>
 </html>
