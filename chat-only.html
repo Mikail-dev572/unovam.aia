@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>UNOVAM Chat</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/feather-icons"></script>
@@ -171,24 +171,13 @@
     }
 
     .feedback button.active i[data-feather] {
-      stroke: #222 !important;
-    }
-
-    .new-chat-button button {
-      margin-top: 6px;
-      background: #eee;
-      border: none;
-      padding: 6px 12px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 13px;
+      stroke: #222;
     }
 
     #input-area {
       display: flex;
       align-items: center;
       padding: 12px 16px;
-      padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 12px);
       border-top: 1px solid #ddd;
       background: #fff;
     }
@@ -207,10 +196,11 @@
     .send {
       background: none;
       border: none;
-      font-size: 24px;
+      font-size: 22px;
       margin-left: 8px;
       cursor: pointer;
-      color: #000;
+      color: #3c3c3c;
+      flex-shrink: 0;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -253,7 +243,7 @@
       }
 
       .send {
-        font-size: 26px;
+        font-size: 24px;
         display: flex;
       }
     }
@@ -362,9 +352,6 @@
              <button onclick="copyMessage(this, '${messageId}')" title="Kopieren"><i data-feather="copy"></i></button>
              <button onclick="handleFeedback('${messageId}', 'up', this)" title="Gefällt mir"><i data-feather="thumbs-up"></i></button>
              <button onclick="handleFeedback('${messageId}', 'down', this)" title="Gefällt mir nicht"><i data-feather="thumbs-down"></i></button>
-           </div>
-           <div class="new-chat-button">
-             <button onclick="neuerChat()">🗘 Neuen Chat starten</button>
            </div>
          </div>`;
       chat.appendChild(wrapper);
