@@ -365,8 +365,12 @@ button i[data-feather],
     function copyMessage(button, id) {
       const text = document.getElementById(id).textContent;
      navigator.clipboard.writeText(text).then(() => {
-        button.innerHTML = '<i data-feather="check-circle"></i>';
-        feather.replace();
+        button.innerHTML = `
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
+       fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+  </svg>
+`;
   
         button.classList.add('active');
 
