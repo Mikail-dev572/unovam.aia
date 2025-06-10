@@ -22,8 +22,13 @@
       flex-direction: column;
       width: 100vw;
       height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
       background: white;
       z-index: 9999;
+      border-radius: 0 !important;
+      box-shadow: none !important;
     }
 
     .chat-header {
@@ -46,8 +51,8 @@
     .chat-header .logo img {
       height: 42px;
       width: 42px;
-      border-radius: 50%;
       object-fit: cover;
+      border-radius: 50%;
     }
 
     .menu-wrapper {
@@ -57,8 +62,6 @@
     .menu {
       font-size: 20px;
       cursor: pointer;
-      background: none;
-      border: none;
     }
 
     .menu-dropdown {
@@ -84,7 +87,13 @@
       display: flex;
       align-items: center;
       gap: 8px;
-      color: #000;
+    }
+
+    .menu-dropdown button i[data-feather],
+    .feedback button i[data-feather] {
+      width: 16px;
+      height: 16px;
+      stroke-width: 2;
     }
 
     #chat {
@@ -97,7 +106,7 @@
 
     .bot-message-wrapper {
       display: flex;
-      align-items: flex-start;
+      align-items: flex-end;
       gap: 10px;
       margin: 6px 0;
     }
@@ -105,19 +114,26 @@
     .logo-icon {
       width: 42px;
       height: 42px;
+      background: white;
       border-radius: 50%;
       overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
     }
 
     .logo-icon img {
-      width: 100%;
-      height: 100%;
+      height: 42px;
+      width: 42px;
       object-fit: cover;
+      border-radius: 50%;
     }
 
     .message {
       max-width: 85%;
       padding: 14px 18px;
+      margin: 6px 0;
       border-radius: 18px;
       font-size: 14px;
       line-height: 1.5;
@@ -139,7 +155,7 @@
     .feedback {
       display: flex;
       gap: 4px;
-      margin-top: 4px;
+      margin-left: 10px;
     }
 
     .feedback button {
@@ -155,13 +171,11 @@
     }
 
     .feedback button.active svg {
-      fill: #222;
-      stroke: #222;
+      stroke: #333;
     }
 
     #input-area {
       display: flex;
-      align-items: center;
       padding: 12px 16px;
       border-top: 1px solid #ddd;
       background: #fff;
@@ -174,23 +188,27 @@
       font-size: 14px;
       background: transparent;
       outline: none;
+      color: #444;
     }
 
     .send {
       background: none;
       border: none;
-      font-size: 22px;
       margin-left: 8px;
+      font-size: 20px;
       cursor: pointer;
+      color: #3c3c3c;
     }
 
     .typing {
       display: flex;
       gap: 4px;
       align-items: center;
+      width: fit-content;
       padding: 10px 14px;
       border-radius: 16px 16px 16px 4px;
       background: #f3f3f5;
+      color: #444;
     }
 
     .typing .dot {
@@ -208,22 +226,6 @@
       0%, 80%, 100% { opacity: 0; }
       40% { opacity: 1; }
     }
-
-    @media (max-width: 600px) {
-      #input-area {
-        flex-direction: row;
-        align-items: stretch;
-      }
-
-      #input {
-        font-size: 16px;
-      }
-
-      .send {
-        font-size: 28px;
-        margin-left: 12px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -234,7 +236,7 @@
         <span>unovam.de</span>
       </div>
       <div class="menu-wrapper">
-        <button class="menu" onclick="toggleMenu()">⋮</button>
+        <div class="menu" onclick="toggleMenu()">⋮</div>
         <div class="menu-dropdown" id="menu-dropdown">
           <button onclick="neuerChat()"><i data-feather="refresh-ccw"></i> Neuen Chat starten</button>
         </div>
@@ -254,12 +256,6 @@
 
     document.addEventListener("DOMContentLoaded", () => {
       neuerChat();
-    });
-
-    document.addEventListener("click", (e) => {
-      if (!e.target.closest('.menu-wrapper')) {
-        menuDropdown.style.display = 'none';
-      }
     });
 
     function toggleMenu() {
@@ -290,8 +286,9 @@
       typingWrapper.className = "bot-message-wrapper";
       typingWrapper.innerHTML = `
         <div class="logo-icon"><img src="logo.png" alt="UNOVAM" /></div>
-        <div class="typing"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-      `;
+        <div class="message bot-message typing">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        </div>`;
       chat.appendChild(typingWrapper);
       chat.scrollTop = chat.scrollHeight;
 
@@ -303,17 +300,11 @@
         });
         const data = await res.json();
         typingWrapper.remove();
-        if (data && data.antwort) {
-          anzeigenAntwort(data.antwort);
-        } else {
-          anzeigenAntwort("❌ Unerwartete Antwort vom Server.");
-        }
+        anzeigenAntwort(data.antwort);
       } catch (err) {
         typingWrapper.remove();
         anzeigenAntwort("❌ Fehler: " + err.message);
       }
-
-      chat.scrollTop = chat.scrollHeight;
     }
 
     function anzeigenAntwort(text) {
@@ -329,8 +320,7 @@
             <button onclick="handleFeedback('${messageId}', 'up', this)" title="Gefällt mir"><i data-feather="thumbs-up"></i></button>
             <button onclick="handleFeedback('${messageId}', 'down', this)" title="Gefällt mir nicht"><i data-feather="thumbs-down"></i></button>
           </div>
-        </div>
-      `;
+        </div>`;
       chat.appendChild(wrapper);
       feather.replace();
       chat.scrollTop = chat.scrollHeight;
@@ -341,12 +331,12 @@
       navigator.clipboard.writeText(text).then(() => {
         const icon = button.querySelector('i');
         icon.setAttribute('data-feather', 'check');
-        feather.replace();
         button.classList.add('active');
+        feather.replace();
         setTimeout(() => {
           icon.setAttribute('data-feather', 'copy');
-          feather.replace();
           button.classList.remove('active');
+          feather.replace();
         }, 2000);
       });
     }
@@ -355,7 +345,6 @@
       const buttons = button.parentNode.querySelectorAll('button');
       buttons.forEach(b => b.classList.remove('active'));
       button.classList.add('active');
-      feather.replace();
     }
 
     feather.replace();
