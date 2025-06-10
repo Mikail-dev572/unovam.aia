@@ -23,6 +23,7 @@
       width: 100vw;
       height: 100vh;
       background: white;
+      z-index: 9999;
     }
 
     .chat-header {
@@ -58,7 +59,6 @@
       cursor: pointer;
       background: none;
       border: none;
-      color: #000;
     }
 
     .menu-dropdown {
@@ -85,12 +85,6 @@
       align-items: center;
       gap: 8px;
       color: #000;
-    }
-
-    .menu-dropdown i[data-feather] {
-      width: 10px;
-      height: 10px;
-      stroke: #000;
     }
 
     #chat {
@@ -158,12 +152,11 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      color: #000;
     }
 
     .feedback button.active svg {
-      fill: #000;
-      stroke: #000;
+      fill: #222;
+      stroke: #222;
     }
 
     #input-area {
@@ -189,7 +182,6 @@
       font-size: 22px;
       margin-left: 8px;
       cursor: pointer;
-      color: #000;
     }
 
     .typing {
@@ -217,27 +209,19 @@
       40% { opacity: 1; }
     }
 
-    /* ===== MOBILE FIXES ===== */
     @media (max-width: 600px) {
-      .menu {
-        top: -10px;
-        position: relative;
+      #input-area {
+        flex-direction: row;
+        align-items: stretch;
       }
 
-      .close-button {
-        position: fixed;
-        bottom: 72px !important; /* ← Verschoben */
-        right: 16px;
-        z-index: 9999;
-      }
-
-      .menu-dropdown button {
-        color: #000 !important;
+      #input {
+        font-size: 16px;
       }
 
       .send {
         font-size: 28px;
-        color: #000;
+        margin-left: 12px;
       }
     }
   </style>
@@ -256,18 +240,11 @@
         </div>
       </div>
     </div>
-
     <div id="chat"></div>
-
     <div id="input-area">
       <input id="input" placeholder="Nachricht eingeben..." />
       <button class="send" onclick="senden()">&#10148;</button>
     </div>
-
-    <!-- Der Chat-Schließen Button -->
-    <button class="close-button" onclick="minimiereChat()" style="width: 48px; height: 48px; background: #000; color: #fff; border: none; border-radius: 50%; font-size: 24px;">
-      &#x25BC;
-    </button>
   </div>
 
   <script>
@@ -379,10 +356,6 @@
       buttons.forEach(b => b.classList.remove('active'));
       button.classList.add('active');
       feather.replace();
-    }
-
-    function minimiereChat() {
-      alert("Chat wird minimiert – Funktion kann hier eingebaut werden.");
     }
 
     feather.replace();
