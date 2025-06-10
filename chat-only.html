@@ -27,8 +27,6 @@
       left: 0;
       background: white;
       z-index: 9999;
-      border-radius: 0 !important;
-      box-shadow: none !important;
     }
 
     .chat-header {
@@ -62,6 +60,7 @@
     .menu {
       font-size: 20px;
       cursor: pointer;
+      color: #333;
     }
 
     .menu-dropdown {
@@ -87,16 +86,12 @@
       display: flex;
       align-items: center;
       gap: 8px;
+      color: #000;
     }
 
-    .menu-dropdown button i[data-feather],
-    .feedback button i[data-feather] {
-      width: 12px;
-      height: 12px;
-      stroke-width: 2;
-      stroke: #888;
-      fill: none;
-      transition: stroke 0.2s ease;
+    .menu-dropdown i[data-feather] {
+      width: 10px !important;
+      height: 10px !important;
     }
 
     #chat {
@@ -117,7 +112,6 @@
     .logo-icon {
       width: 42px;
       height: 42px;
-      background: white;
       border-radius: 50%;
       overflow: hidden;
       display: flex;
@@ -171,10 +165,11 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
+      color: #444;
     }
 
     .feedback button.active i[data-feather] {
-      stroke: #333;
+      stroke: #333 !important;
     }
 
     #input-area {
@@ -199,11 +194,12 @@
     .send {
       background: none;
       border: none;
-      font-size: 20px;
+      font-size: 22px;
       margin-left: 8px;
       cursor: pointer;
       color: #3c3c3c;
       flex-shrink: 0;
+      display: flex;
     }
 
     .typing {
@@ -231,6 +227,18 @@
     @keyframes blink {
       0%, 80%, 100% { opacity: 0; }
       40% { opacity: 1; }
+    }
+
+    @media (max-width: 600px) {
+      .feedback button i[data-feather] {
+        stroke: #444 !important;
+      }
+      .menu-dropdown button {
+        color: #000 !important;
+      }
+      .send {
+        font-size: 22px;
+      }
     }
   </style>
 </head>
@@ -290,11 +298,11 @@
 
       const typingWrapper = document.createElement("div");
       typingWrapper.className = "bot-message-wrapper";
-      typingWrapper.innerHTML = `
-        <div class="logo-icon"><img src="logo.png" alt="UNOVAM" /></div>
-        <div class="message bot-message typing">
-          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-        </div>`;
+      typingWrapper.innerHTML =
+        `<div class="logo-icon"><img src="logo.png" alt="UNOVAM" /></div>
+         <div class="message bot-message typing">
+           <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+         </div>`;
       chat.appendChild(typingWrapper);
       chat.scrollTop = chat.scrollHeight;
 
@@ -317,16 +325,16 @@
       const wrapper = document.createElement("div");
       wrapper.className = "bot-message-wrapper";
       const messageId = "msg-" + Date.now();
-      wrapper.innerHTML = `
-        <div class="logo-icon"><img src="logo.png" alt="UNOVAM" /></div>
-        <div>
-          <div class="message bot-message" id="${messageId}">${text}</div>
-          <div class="feedback">
-            <button onclick="copyMessage(this, '${messageId}')" title="Kopieren"><i data-feather="copy"></i></button>
-            <button onclick="handleFeedback('${messageId}', 'up', this)" title="Gefällt mir"><i data-feather="thumbs-up"></i></button>
-            <button onclick="handleFeedback('${messageId}', 'down', this)" title="Gefällt mir nicht"><i data-feather="thumbs-down"></i></button>
-          </div>
-        </div>`;
+      wrapper.innerHTML =
+        `<div class="logo-icon"><img src="logo.png" alt="UNOVAM" /></div>
+         <div>
+           <div class="message bot-message" id="${messageId}">${text}</div>
+           <div class="feedback">
+             <button onclick="copyMessage(this, '${messageId}')" title="Kopieren"><i data-feather="copy"></i></button>
+             <button onclick="handleFeedback('${messageId}', 'up', this)" title="Gefällt mir"><i data-feather="thumbs-up"></i></button>
+             <button onclick="handleFeedback('${messageId}', 'down', this)" title="Gefällt mir nicht"><i data-feather="thumbs-down"></i></button>
+           </div>
+         </div>`;
       chat.appendChild(wrapper);
       feather.replace();
       chat.scrollTop = chat.scrollHeight;
