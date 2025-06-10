@@ -296,7 +296,7 @@
 /* ✅ Optional (Desktop-Absicherung) */
 @media (min-width: 769px) {
   #chat-close {
-    display: !important;
+    display: none !important;
   }
 }
 
@@ -304,12 +304,17 @@
 </head>
 <body>
 <script>
-  if (window.innerWidth > 768) {
-    document.addEventListener("DOMContentLoaded", () => {
-      document.getElementById("chat-box").style.display = "none";
-      document.getElementById("open-chat").style.display = "block";
-    });
+  document.addEventListener("DOMContentLoaded", () => {
+  if (window.innerWidth <= 768) {
+    document.getElementById("chat-box").style.display = "none";
+    document.getElementById("open-chat").style.display = "block";
+  } else {
+    document.getElementById("chat-box").style.display = "flex";
+    document.getElementById("open-chat").style.display = "none";
+    document.getElementById("chat-close").style.display = "none";
+    neuerChat(); // Chat direkt starten, wenn leer
   }
+});
 </script>
   <div id="chat-box">
     <div class="chat-header">
@@ -507,7 +512,7 @@ function closeChat() {
 }
     
 </script>
-<button id="open-chat" onclick="openChat()">💬</button>
+<button id="open-chat" onclick="openChat()" style="display: none;">💬</button>
 <script>
   feather.replace();
 
