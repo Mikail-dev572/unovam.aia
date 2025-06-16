@@ -1,4 +1,4 @@
- Unternehmen heißt: UNOVAM
+Unternehmen heißt: UNOVAM
 
 Webseite: So läuft ein Projekt ab
 Überschrift:
@@ -12,8 +12,8 @@ Schritt-für-Schritt-Abschnitt:
 (Am besten als 5-Karten-Layout oder nummerierte Liste darstellen)
 
 Kontakt aufnehmen
-Du erreichst uns per Kontaktformular, E-Mail oder WhatsApp.
-Schreib uns kurz, was du brauchst – wir melden uns innerhalb von 24 Stunden.
+Du erreichst uns per Anruf, Kontaktformular, E-Mail oder WhatsApp.
+Schreib uns kurz, was du brauchst – wir melden uns spätestens innerhalb von 24 Stunden.
 
 Kostenloses Erstgespräch
 In einem kurzen Gespräch klären wir, worum es geht, was du brauchst und was möglich ist.
@@ -34,25 +34,9 @@ Abschlusssatz + Button:
 Klingt gut?
 Dann lass uns starten – einfach, professionell und direkt.
 
-[ Jetzt Projekt starten ]
 
-💡 Designhinweis:
 
-Helle Karten oder Timeline-Stil
 
-Links kleine Icons (z. B. Telefon, Sprechblase, Checkliste, Laptop, Übergabe)
-
-Weißer Hintergrund, graue Schrift, moderne Icons
-
-Möchtest du, dass ich dir diesen Abschnitt direkt in HTML mit Stilvorgaben baue?
-Sag einfach: „Ja, HTML bitte“ – und ich setze dir den Abschnitt 1:1 um.
-
-Du:
-erweiter bei der startseite für ki chatbot den text auf generelle ki implementierung
-
-ChatGPT:
-Klar, Mikail – hier ist der erweiterte und überarbeitete Text für den KI-Bereich deiner Startseite.
-Der Text deckt jetzt nicht nur Chatbots, sondern allgemeine KI-Implementierung ab – perfekt für dein Angebot.
 
 Künstliche Intelligenz & Automatisierung
 Digitale Prozesse müssen heute mehr können als nur funktionieren – sie sollen mitdenken, vorausschauend handeln und echte Entlastung schaffen.
@@ -77,31 +61,14 @@ ab 299 € – je nach Umfang und System
 
 [ Jetzt KI-Projekt anfragen ]
 
-💡 Wenn du willst, baue ich dir diesen Abschnitt direkt in HTML oder entwerfe ein visuelles Layout für die Startseite.
-Sag einfach: „Ja, HTML“ oder „Mach mir ein Designvorschlag“ – ich setze es direkt um.
 
-Du:
-kürzer
-
-ChatGPT:
-Natürlich! Hier ist die kürzere, klare Version für die Startseite, die jetzt nicht nur Chatbots, sondern generelle KI-Implementierung abdeckt:
 
 Künstliche Intelligenz & Automatisierung
 Wir integrieren KI-Lösungen, die Abläufe vereinfachen, Zeit sparen und dein Unternehmen effizienter machen.
 Ob Chatbots, Texterstellung, automatische Antworten oder Prozessautomatisierung – wir entwickeln maßgeschneiderte Systeme, die zu dir passen.
 
-ab 299 €
 
-[ Jetzt KI-Projekt starten ]
 
-Wenn du willst, kann ich den Text direkt als Website-Abschnitt gestalten (HTML/Design). Sag einfach: „Ja, HTML“ oder „als Block anzeigen“.
-
-Du:
-bei meinen produkten kann man auf der seite auf weiterlesen gehen, ich brauch da noch genauere informationen zu allen. schreib das runer
-
-ChatGPT:
-Gerne, Mikail! Hier ist der ausführlichere Text zu deinen Produkten/Dienstleistungen, der erscheinen kann, wenn jemand auf „Weiterlesen“ klickt.
-Die Inhalte sind so geschrieben, dass sie professionell, verständlich und überzeugend wirken – perfekt für Unterseiten oder erweiterte Ansichten.
 
 💻 Webdesign & Webseiten-Erstellung
 Wir erstellen moderne, mobiloptimierte Websites, die nicht nur gut aussehen, sondern auch schnell laden, bei Google sichtbar sind und deine Zielgruppe ansprechen.
@@ -134,47 +101,8 @@ Texterstellung mit KI (z. B. E-Mails, FAQs, Produkttexte)
 
 Verknüpfungen mit Tools wie Zapier, Make oder Google Sheets
 
-🛠️ IT- & Kamera-Installationen
-Neben digitalen Services kümmern wir uns auch um die Technik vor Ort.
-Ob Büro, Ladenfläche oder Zuhause – wir installieren Netzwerke, Kameras und Systeme, die reibungslos laufen.
 
-Was wir anbieten:
 
-IP-Kameras & Videoüberwachung (inkl. App-Steuerung)
-
-WLAN & Netzwerkeinrichtung
-
-Smart-Home-Komponenten
-
-Router, Repeater, Server & PC-Aufbau
-
-🎨 Grafikdesign & Branding
-Ein professioneller Auftritt beginnt mit einem starken Design.
-Wir gestalten dein Logo, Visitenkarten, Flyer, Banner und Social-Media-Posts – abgestimmt auf deine Marke und Zielgruppe.
-
-Designs, die wir anbieten:
-
-Logos (inkl. Vektordateien & Markenfarben)
-
-Printdesign: Flyer, Poster, Broschüren
-
-Social Media Templates
-
-Digitale Werbebanner & Icons
-
-📱 Social Media Management
-Wir helfen dir, auf Plattformen wie Instagram, Facebook oder LinkedIn sichtbar zu werden.
-Dazu entwickeln wir Inhalte, planen Beiträge und sorgen dafür, dass deine Marke modern und aktiv wahrgenommen wird.
-
-Inhalte & Betreuung:
-
-Einrichtung von Businessprofilen
-
-Contentplanung & Grafikdesign
-
-Regelmäßige Postings (auch auf Wunsch vorbereitet)
-
-Community Management (Kommentare, Nachrichten)
 
 🧠 Digitale Beratung & Prozessautomatisierung
 Du willst deine täglichen Abläufe digitaler, schneller oder einfacher machen?
@@ -184,7 +112,7 @@ Themenbereiche:
 
 Prozessanalyse & digitale Optimierung
 
-Tool-Beratung (z. B. Trello, Notion, Google Workspace, Make)
+Tool-Beratung 
 
 Integration und Einrichtung digitaler Workflows
 
@@ -205,29 +133,13 @@ UNOVAM verfolgt die Vision, Unternehmen mit intuitiven Technologien, smarten Sys
 
 Ob KI-Chatbots, durchdachte Webseiten oder visuelle Markenidentität: Wir machen digitale Lösungen verständlich, bezahlbar und zukunftssicher – für jedes Unternehmen, unabhängig von Größe oder Branche. pass den text an, ist ja nicht mehr nur ki chat bots
 
-ChatGPT:
-Gerne, Mikail – hier ist die überarbeitete Version deiner Vision, passend zu deinem erweiterten Leistungsangebot. Der Text ist weiterhin klar, professionell und überzeugt durch Einfachheit und Weitblick.
-
-Digitalisierung ist kein Luxus, sondern eine Notwendigkeit – und sie darf nicht kompliziert sein.
 
 UNOVAM verfolgt die Vision, Unternehmen mit intuitiven Technologien, intelligenten Systemen und modernem Design zu unterstützen – effizient, verständlich und nachhaltig.
 
 Von individuellen Webseiten über KI-gestützte Automatisierung bis hin zu visueller Markenentwicklung und IT-Technik:
 Wir machen digitale Lösungen zugänglich, bezahlbar und zukunftssicher – für Unternehmen jeder Größe, in jeder Branche.
 
-Wenn du willst, kann ich diesen Text direkt in deinen Webseitencode (HTML) einfügen oder mit einem passenden Bild- und Designvorschlag kombinieren. Sag einfach: „Ja, HTML“ oder „Gestalte das als Block“.
 
-Du:
-ich will den ki chat bot von meiner webseite trainieren. ich brauch wirklich alle informationen die der kunde fragen könnte. schreib alles detailliert zusammen
-
-ChatGPT:
-Sehr gut, Mikail – wenn du einen KI-Chatbot auf deiner Website trainieren möchtest, brauchst du eine vollständige Sammlung aller Fragen und Antworten, die Besucher stellen könnten.
-Ich habe dir hier eine umfassende und strukturierte Liste erstellt – detailliert, professionell und realistisch.
-
-Du kannst sie nutzen, um deinen Chatbot z. B. über Chatbase, CustomGPT, GPTs oder eine API zu trainieren.
-
-🧠 Trainingsdaten für deinen Chatbot (UNOVAM)
-Thema: Allgemeine Kundenanfragen auf deiner Website
 
 🔹 1. Allgemeine Fragen zu UNOVAM
 Frage: Was ist UNOVAM?
@@ -243,21 +155,16 @@ Antwort: Gründer von UNOVAM ist Mikail Ünal. Er begleitet Kunden persönlich v
 Frage: Was bietet UNOVAM alles an?
 Antwort: Unsere Leistungen umfassen:
 
-Webdesign & Website-Erstellung
-
 KI-Chatbots & Automatisierung
 
-IT- und Kamera-Installationen
+Webdesign & Website-Erstellung
 
-Grafikdesign & Markenentwicklung
-
-Social Media Management
 
 Digitale Prozessoptimierung
 
 Individuelle Beratung & Support
 
-Frage: Macht ihr auch einzelne Leistungen, z. B. nur Logo oder nur Chatbot?
+Frage: Macht ihr auch einzelne Leistungen, z. B. nur Digitale Prozessoptimierung oder nur Chatbot?
 Antwort: Ja, selbstverständlich. Sie können einzelne Leistungen buchen oder diese in einem Gesamtpaket kombinieren.
 
 🔹 3. Webdesign & Website
@@ -288,29 +195,6 @@ Antwort: Ein individueller KI-Chatbot startet ab 299 €. Der Preis hängt dav
 Frage: Arbeitet ihr mit ChatGPT?
 Antwort: Ja, unsere Systeme basieren auf Technologien wie ChatGPT/OpenAI, Chatbase oder individuellen APIs.
 
-🔹 5. IT & Kamera-Installation
-Frage: Welche technischen Installationen bietet ihr an?
-Antwort: Wir installieren Netzwerke, Router, PCs, Überwachungskameras und Smart-Home-Komponenten – inkl. Einrichtung und Einweisung.
-
-Frage: Wo installiert ihr?
-Antwort: In Wörrstadt und Umgebung. Weitere Orte auf Anfrage.
-
-Frage: Welche Kameras nutzt ihr?
-Antwort: Wir empfehlen geprüfte IP-Kameras von Marken wie Reolink, Hikvision oder TP-Link, je nach Anforderung und Budget.
-
-🔹 6. Grafikdesign & Branding
-Frage: Was kostet ein Logo?
-Antwort: Ein individuelles Logodesign beginnt ab 149 €, inklusive Vektordateien und Farbdefinition.
-
-Frage: Macht ihr auch Flyer und Social Media Grafiken?
-Antwort: Ja. Wir gestalten Flyer, Poster, Visitenkarten sowie Social Media Templates und Posts.
-
-🔹 7. Social Media Management
-Frage: Erstellt ihr auch Instagram-Seiten?
-Antwort: Ja, wir richten professionelle Business-Accounts ein und bieten auf Wunsch regelmäßige Betreuung und Content-Design an.
-
-Frage: Was kostet Social Media Betreuung?
-Antwort: Ab 199 € pro Monat – je nach Plattform und Umfang.
 
 🔹 8. Ablauf & Projektstart
 Frage: Wie läuft ein Projekt bei euch ab?
@@ -351,24 +235,6 @@ Antwort: Ja. Wir achten auf DSGVO-konforme Umsetzung, HTTPS-Verschlüsselung, si
 Frage: Wie schützt ihr meine Daten?
 Antwort: Alle Daten bleiben vertraulich und werden ausschließlich zur Projektabwicklung verwendet. Auf Wunsch unterzeichnen wir eine NDA.
 
-✅ Nächste Schritte
-Wenn du möchtest, kann ich diese Informationen:
-
-als CSV-Datei oder Tabelle für Chatbase formatieren
-
-als Markdown oder JSON für API-Training ausgeben
-
-oder direkt in ein Chatbot-Dokument überführen
-
-👉 Sag einfach: „Trainingsdatei erstellen“ oder „Mach JSON draus“ – ich setze es sofort um.
-
-Du:
-erweiter es noch weiter aus. die kunden sollen alles abdecken
-
-ChatGPT:
-Perfekt, Mikail. Hier ist die erweiterte Liste an Kundenfragen & Antworten, die du nutzen kannst, um deinen KI-Chatbot umfassend zu trainieren. Diese Version deckt jetzt auch seltenere Fragen, Einwände, technische Details und Servicefragen ab. Du kannst sie 1:1 verwenden.
-
-🔍 Erweiterte Kundenfragen für deinen KI-Chatbot (UNOVAM)
 🟦 Fragen zu Verfügbarkeit & Kontakt
 Frage: Wann seid ihr erreichbar?
 Antwort: Wir sind in der Regel werktags zwischen 09:00–18:00 Uhr erreichbar. Anfragen über das Kontaktformular oder WhatsApp werden meist innerhalb weniger Stunden beantwortet.
@@ -426,47 +292,11 @@ Antwort: Wir setzen auf moderne Systeme wie WordPress, Webflow, Chatbase, Make, 
 Frage: Funktionieren die Tools auch auf dem Handy?
 Antwort: Ja. Alle unsere Webseiten und Anwendungen sind mobiloptimiert – auch für Tablets.
 
-Frage: Arbeitet ihr auch mit Shopify oder WooCommerce?
-Antwort: Ja, wir unterstützen auch Shopsysteme – inklusive Produktseiten, Zahlungsintegration und Versandlogik.
-
-🟦 Design- und Markenthemen
-Frage: Macht ihr auch ein komplettes Branding?
-Antwort: Ja – Logo, Farben, Schriftwahl, Bildsprache und mehr. So entsteht ein einheitlicher, professioneller Auftritt.
-
-Frage: Kann ich mein Logo auch als Datei für Druck und Website bekommen?
-Antwort: Natürlich. Du bekommst alle gängigen Formate (PNG, SVG, PDF, AI) – inkl. Schwarz-Weiß-Versionen.
-
-Frage: Könnt ihr bestehende Designs verbessern?
-Antwort: Ja. Wir bieten Redesigns und Optimierungen an – egal ob für Website, Logo oder Flyer.
 
 🟦 Langfristige Betreuung
 Frage: Was kostet monatliche Wartung?
 Antwort: Kleine Wartungspakete starten ab 29 €/Monat. Darin enthalten sind z. B. Updates, Backups, kleine Änderungen und Support.
 
-Frage: Gibt es Notfallhilfe bei Problemen?
-Antwort: Ja. Für alle Kunden mit Wartungsvertrag sind wir auch außerhalb der regulären Zeiten erreichbar.
-
-Wenn du willst, exportiere ich dir alle Fragen & Antworten jetzt als:
-
-📄 CSV-Datei (für Chatbase)
-
-💬 Markdown/Text-Dokument
-
-📦 JSON-Format (für API-Training)
-
-📑 PDF-Dokumentation für Kunden
-
-👉 Schreib einfach:
-„Mach mir CSV“ oder „Gib mir JSON“ – und ich liefere es direkt!
-
-Du:
-erweiter es noch weiter
-
-ChatGPT:
-Hier kommt die erweiterte finale Liste mit zusätzlichen Kundenfragen & Antworten, die du in deinen Chatbot integrieren kannst – damit er wirklich jede Kundenfrage professionell beantworten kann.
-
-🧠 Zusätzliche Kundenfragen & Antworten für dein Chatbot-Training (UNOVAM)
-Erweitert für maximale Abdeckung
 
 🟩 Fragen zur Zusammenarbeit & Projektphasen
 Frage: Wie läuft ein typischer Website-Auftrag bei euch ab?
@@ -502,8 +332,6 @@ Antwort: Ja, auf Wunsch übernehmen wir die komplette Texterstellung – mit pro
 Frage: Ist die Website DSGVO-konform?
 Antwort: Ja. Wir integrieren Cookie-Hinweise, Datenschutzseiten und technische Grundlagen für DSGVO-Konformität. Für rechtliche Texte empfehlen wir eine individuelle Prüfung durch einen Juristen.
 
-Frage: Arbeitet ihr mit Tools wie Cookiebot, Google Analytics oder Matomo?
-Antwort: Ja, wir richten auf Wunsch Analyse- und Cookie-Tools ein – inkl. Einwilligungsbanner nach DSGVO.
 
 🟩 Branchenspezifische Fragen
 Frage: Macht ihr auch Webseiten für Restaurants / Friseure / Handwerker / Coaches?
