@@ -89,8 +89,8 @@
       gap: 8px;
     }
 
-   .menu-dropdown button svg[data-feather="refresh-ccw"] {
-  width: 10px;     /* oder 14px je nach gewünschter Größe */
+  .menu-dropdown button svg.feather-refresh-ccw {
+  width: 10px; /* oder 12px, 14px – wie du willst */
   height: 10px;
   stroke-width: 1.5;
   vertical-align: middle;
@@ -148,7 +148,18 @@
       font-size: 14px;
       line-height: 1.5;
     }
+.feedback button svg {
+  stroke: #555;
+  fill: none;
+  transition: all 0.2s ease;
+}
 
+/* Daumen ausfüllen bei Aktivierung */
+.feedback button.active svg.feather-thumbs-up,
+.feedback button.active svg.feather-thumbs-down {
+  stroke: none;
+  fill: #000;
+}
     .user-message {
       background: #000;
       color: white;
@@ -362,6 +373,7 @@ button i[data-feather],
             <button onclick="copyMessage(this, '${messageId}')" title="Kopieren"><i data-feather="copy"></i></button>
             <button onclick="handleFeedback('${messageId}', 'up', this)" title="Gefällt mir"><i data-feather="thumbs-up"></i></button>
             <button onclick="handleFeedback('${messageId}', 'down', this)" title="Gefällt mir nicht"><i data-feather="thumbs-down"></i></button>
+            <button onclick="neuerChat()" title="Chat neu starten"><i data-feather="refresh-ccw"></i></button>
           </div>
         </div>`;
       chat.appendChild(wrapper);
