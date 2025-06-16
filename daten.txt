@@ -1,49 +1,30 @@
-Unternehmen heißt: UNOVAM
+UNOVAM – Vision & Leistungen (aktualisiert)
 
-Webseite: So läuft ein Projekt ab
-Überschrift:
+UNOVAM verfolgt die Vision, Unternehmen mit intuitiven Technologien, intelligenten Systemen und modernem Design dabei zu unterstützen, effizienter, moderner und wettbewerbsfähiger zu werden.
+
+Ob KI-gestützte Automatisierung, durchdachte Webseiten oder digitale Prozessoptimierung: Wir machen digitale Lösungen verständlich, bezahlbar und zukunftssicher – für jedes Unternehmen, unabhängig von Größe oder Branche.
+
 Der Ablauf – Schritt für Schritt zur digitalen Lösung
 
-Einleitung (kurz):
-Ein klarer Ablauf spart Zeit, schafft Vertrauen und sorgt dafür, dass jedes Projekt effizient und strukturiert umgesetzt wird.
-So läuft die Zusammenarbeit mit UNOVAM ab:
+Ein klarer Ablauf spart Zeit, schafft Vertrauen und sorgt dafür, dass jedes Projekt effizient und strukturiert umgesetzt wird. So läuft die Zusammenarbeit mit UNOVAM ab:
 
-Schritt-für-Schritt-Abschnitt:
-(Am besten als 5-Karten-Layout oder nummerierte Liste darstellen)
+Kontakt aufnehmenDu erreichst uns per Anruf, Kontaktformular, E-Mail oder WhatsApp.Schreib uns kurz, was du brauchst – wir melden uns spätestens innerhalb von 24 Stunden.
 
-Kontakt aufnehmen
-Du erreichst uns per Anruf, Kontaktformular, E-Mail oder WhatsApp.
-Schreib uns kurz, was du brauchst – wir melden uns spätestens innerhalb von 24 Stunden.
+Kostenloses ErstgesprächIn einem kurzen Gespräch klären wir, worum es geht, was du brauchst und was möglich ist.Unverbindlich, klar und ohne Fachchinesisch.
 
-Kostenloses Erstgespräch
-In einem kurzen Gespräch klären wir, worum es geht, was du brauchst und was möglich ist.
-Unverbindlich, klar und ohne Fachchinesisch.
+Angebot & PlanungDu bekommst ein individuelles, transparentes Angebot mit Festpreis (wenn möglich) und klaren Leistungen.Nach deiner Freigabe legen wir los.
 
-Angebot & Planung
-Du bekommst ein individuelles, transparentes Angebot mit Festpreis (wenn möglich) und klaren Leistungen.
-Nach deiner Freigabe legen wir los.
+Umsetzung & KommunikationWir setzen dein Projekt zuverlässig um – mit regelmäßigen Updates, Zwischenständen und der Möglichkeit für Feedback.
 
-Umsetzung & Kommunikation
-Wir setzen dein Projekt zuverlässig um – und du bekommst regelmäßige Updates, Zwischenstände und die Möglichkeit, Feedback zu geben.
+Fertigstellung & ÜbergabeDas Ergebnis wird dir sauber übergeben – ob Website, Design oder System.Auf Wunsch bieten wir Support, Wartung oder Erweiterungen an.
 
-Fertigstellung & Übergabe
-Das Ergebnis wird dir sauber übergeben – ob Website, Design oder System.
-Auf Wunsch bieten wir Support, Wartung oder Erweiterungen an.
+Klingt gut?👉 Dann lass uns starten – einfach, professionell und direkt.[Jetzt Projekt anfragen]
 
-Abschlusssatz + Button:
-Klingt gut?
-Dann lass uns starten – einfach, professionell und direkt.
+🤖 Künstliche Intelligenz & Automatisierung
 
-
-
-
-
-Künstliche Intelligenz & Automatisierung
 Digitale Prozesse müssen heute mehr können als nur funktionieren – sie sollen mitdenken, vorausschauend handeln und echte Entlastung schaffen.
-Wir integrieren Künstliche Intelligenz individuell in deine bestehenden Systeme, Webseiten oder Kommunikationskanäle – von Chatbots bis zu automatisierten Workflows.
 
-Ob Kundensupport, Terminverwaltung, Texterstellung, E-Mail-Antworten oder Datenabgleich:
-Mit maßgeschneiderter KI-Logik und intelligenter Automatisierung vereinfachen wir deine Abläufe, sparen Zeit und machen dein Unternehmen zukunftssicher.
+UNOVAM integriert Künstliche Intelligenz individuell in deine bestehenden Systeme, Webseiten oder Kommunikationskanäle – von Chatbots bis zu automatisierten Workflows.
 
 Typische Anwendungen:
 
@@ -55,25 +36,27 @@ KI-gestützte Text- oder Bildgenerierung
 
 Dokumentenanalyse und -strukturierung
 
-Verknüpfung mit Tools wie Make, Zapier, Google Workspace
-
-ab 299 € – je nach Umfang und System
-
-[ Jetzt KI-Projekt anfragen ]
-
-
 
 Künstliche Intelligenz & Automatisierung
-Wir integrieren KI-Lösungen, die Abläufe vereinfachen, Zeit sparen und dein Unternehmen effizienter machen.
-Ob Chatbots, Texterstellung, automatische Antworten oder Prozessautomatisierung – wir entwickeln maßgeschneiderte Systeme, die zu dir passen.
+Immer wieder die gleichen Anfragen? Zeitfressende Aufgaben, die sich ständig wiederholen?
+Mit individuellen KI-Lösungen automatisieren wir Ihre Prozesse – zuverlässig, praxisnah und ohne technische Hürden.
+UNOVAM entwickelt smarte Anwendungen, die sich an Ihren tatsächlichen Bedarf anpassen:
+​
+KI-Chatbot für Ihre Website
 
+Automatisiert Kundenanfragen – rund um die Uhr.
+Trainiert mit Ihren Inhalten (z. B. Website, PDFs, FAQ) und einfach integrierbar.
+Preis: ab 890 € – je nach Umfang und Anforderungen
+​​
+Individuelle KI-Lösungen & Prozessoptimierung
 
+Digitale Assistenten, automatische Texterstellung oder Dokumentenanalyse – maßgeschneidert für Ihre internen Abläufe.
+Ideal für Beratung, Verwaltung, Kommunikation.
+Preis: ab 990 € – je nach Projektumfang
 
+💻Webdesign & Webseiten-Erstellung
 
-💻 Webdesign & Webseiten-Erstellung
 Wir erstellen moderne, mobiloptimierte Websites, die nicht nur gut aussehen, sondern auch schnell laden, bei Google sichtbar sind und deine Zielgruppe ansprechen.
-Jede Seite wird individuell gestaltet, suchmaschinenfreundlich aufgebaut und auf Wunsch mit Tools wie Formularen, Galerien oder Terminbuchung erweitert.
-Ideal für Unternehmen, Selbstständige und lokale Betriebe.
 
 Leistungen im Detail:
 
@@ -87,118 +70,59 @@ Datenschutz (DSGVO) integriert
 
 Optional: Mehrsprachigkeit, CMS, Hosting-Beratung
 
-🤖 Künstliche Intelligenz & Automatisierung
-Wir entwickeln individuelle KI-Lösungen – von Chatbots über automatische Texterstellung bis zu intelligenten Workflows.
-Ziel ist es, Prozesse zu beschleunigen, Kunden besser zu betreuen und dein Tagesgeschäft zu entlasten.
-
-Typische Anwendungen:
-
-Website- und WhatsApp-Chatbots
-
-Automatisierte Antworten & Kundenservice
-
-Texterstellung mit KI (z. B. E-Mails, FAQs, Produkttexte)
-
-Verknüpfungen mit Tools wie Zapier, Make oder Google Sheets
-
-
-
+Onepager ab 799 €Mehrseitige Websites: nach Umfang
 
 🧠 Digitale Beratung & Prozessautomatisierung
+
 Du willst deine täglichen Abläufe digitaler, schneller oder einfacher machen?
-Wir analysieren deine Prozesse und beraten dich zu den besten Tools und Möglichkeiten – z. B. mit KI, Automatisierung oder Cloud-Diensten.
+
+Wir analysieren deine Prozesse und beraten dich zu den besten Tools und Möglichkeiten – z. B. mit KI, Automatisierung oder Cloud-Diensten.
 
 Themenbereiche:
 
 Prozessanalyse & digitale Optimierung
 
-Tool-Beratung 
+Tool-Beratung
 
 Integration und Einrichtung digitaler Workflows
 
 Schulung & Dokumentation
 
-Wenn du willst, kann ich:
+Einzeln buchbar ab 129 € / StundeBeratung ist bei allen Projekten inklusive.
 
-für jedes dieser Angebote eigene HTML-Unterseiten bauen,
+🗂️ Fragen & Antworten – Häufig gestellte Fragen (FAQ)
 
-oder einen Kalkulator / Angebotsanfrage-Formular dazu generieren.
+Was ist UNOVAM?UNOVAM ist ein Dienstleistungsunternehmen für digitale Lösungen – von Webdesign über KI-Systeme bis hin zu Automatisierung und Beratung.
 
-Sag einfach: „Mach Unterseiten“, „HTML bitte“ oder „Jetzt Anfrage-Formular“ – ich setz es um. 🚀
+Wo sitzt UNOVAM?In Wörrstadt, Rheinland-Pfalz. Projekte sind deutschlandweit (digital) umsetzbar.
 
-Du:
-Digitalisierung ist kein Luxus, sondern Notwendigkeit – und sie darf nicht kompliziert sein.
+Wer steckt dahinter?Gründer: Mikail Ünal. Persönliche Begleitung von Beratung bis Umsetzung.
 
-UNOVAM verfolgt die Vision, Unternehmen mit intuitiven Technologien, smarten Systemen und zeitgemäßem Design dabei zu unterstützen, effizienter, moderner und wettbewerbsfähiger zu werden.
-
-Ob KI-Chatbots, durchdachte Webseiten oder visuelle Markenidentität: Wir machen digitale Lösungen verständlich, bezahlbar und zukunftssicher – für jedes Unternehmen, unabhängig von Größe oder Branche. pass den text an, ist ja nicht mehr nur ki chat bots
-
-
-UNOVAM verfolgt die Vision, Unternehmen mit intuitiven Technologien, intelligenten Systemen und modernem Design zu unterstützen – effizient, verständlich und nachhaltig.
-
-Von individuellen Webseiten über KI-gestützte Automatisierung bis hin zu visueller Markenentwicklung und IT-Technik:
-Wir machen digitale Lösungen zugänglich, bezahlbar und zukunftssicher – für Unternehmen jeder Größe, in jeder Branche.
-
-
-
-🔹 1. Allgemeine Fragen zu UNOVAM
-Frage: Was ist UNOVAM?
-Antwort: UNOVAM ist ein Dienstleistungsunternehmen, das sich auf digitale Lösungen spezialisiert hat – von Webdesign über KI-gestützte Systeme bis hin zu IT-Installationen und Grafikdesign. Wir helfen Unternehmen dabei, effizienter, moderner und digital sichtbar zu werden.
-
-Frage: Wo sitzt UNOVAM?
-Antwort: UNOVAM hat seinen Sitz in Wörrstadt, Rheinland-Pfalz. Wir arbeiten digital und vor Ort – je nach Projekt und Wunsch des Kunden.
-
-Frage: Wer steckt hinter UNOVAM?
-Antwort: Gründer von UNOVAM ist Mikail Ünal. Er begleitet Kunden persönlich von der Planung bis zur Umsetzung.
-
-🔹 2. Leistungen – Überblick
-Frage: Was bietet UNOVAM alles an?
-Antwort: Unsere Leistungen umfassen:
+Welche Leistungen bietet ihr?
 
 KI-Chatbots & Automatisierung
 
-Webdesign & Website-Erstellung
-
+Webdesign & Webseiten
 
 Digitale Prozessoptimierung
 
 Individuelle Beratung & Support
 
-Frage: Macht ihr auch einzelne Leistungen, z. B. nur Digitale Prozessoptimierung oder nur Chatbot?
-Antwort: Ja, selbstverständlich. Sie können einzelne Leistungen buchen oder diese in einem Gesamtpaket kombinieren.
+Können Leistungen einzeln gebucht werden?Ja – alle Leistungen sind einzeln oder als Paket buchbar.
 
-🔹 3. Webdesign & Website
-Frage: Wie viel kostet eine Website bei euch?
-Antwort: Eine moderne, responsive Website (Onepager) startet ab 499 €. Der genaue Preis hängt vom Umfang, gewünschten Funktionen und Design ab.
+Wie viel kostet eine Website?Onepager ab 799 €. Umfang, Funktionen & Design beeinflussen den Gesamtpreis.
 
-Frage: Wird die Website auch mobil optimiert?
-Antwort: Ja, alle unsere Seiten sind responsiv – also für Smartphone, Tablet und Desktop optimiert.
+Sind eure Websites mobiloptimiert?Ja – alle Seiten sind vollständig responsive.
 
-Frage: Kann ich die Website später selbst bearbeiten?
-Antwort: Ja. Auf Wunsch setzen wir die Seite mit Systemen wie WordPress oder Webflow um, sodass Sie selbst Änderungen vornehmen können.
+Kann ich meine Website später selbst bearbeiten?Ja – bei Wunsch mit WordPress oder Webflow umgesetzt.
 
-🔹 4. KI & Automatisierung
-Frage: Was genau bietet ihr im Bereich KI an?
-Antwort: Wir integrieren KI-basierte Systeme in Webseiten, Kommunikation oder Prozesse – z. B.:
+Was kostet ein Chatbot?Ab 299 €, je nach Umfang, Anbindung & Datenbasis.
 
-Website- oder WhatsApp-Chatbots
+Nutzt ihr ChatGPT?Ja, wir verwenden GPT-basierte Modelle wie ChatGPT, Chatbase oder APIs.
 
-Automatische Beantwortung von Kundenfragen
+Ist Design/Branding des Chatbots anpassbar?Ja – Farben, Stil & Tonalität können vollständig an dein Corporate Design angepasst werden.
 
-Texterstellung (z. B. Angebote, E-Mails, FAQ)
-
-Datenverarbeitung & Prozessautomatisierung
-
-Frage: Was kostet ein Chatbot?
-Antwort: Ein individueller KI-Chatbot startet ab 299 €. Der Preis hängt davon ab, wie viele Inhalte trainiert werden und auf welchen Kanälen er eingesetzt wird.
-
-Frage: Arbeitet ihr mit ChatGPT?
-Antwort: Ja, unsere Systeme basieren auf Technologien wie ChatGPT/OpenAI, Chatbase oder individuellen APIs.
-
-
-🔹 8. Ablauf & Projektstart
-Frage: Wie läuft ein Projekt bei euch ab?
-Antwort:
+Wie läuft ein Projekt bei euch ab?
 
 Anfrage & Erstgespräch
 
@@ -208,147 +132,32 @@ Umsetzung mit Abstimmungen
 
 Übergabe & Support
 
-Frage: Wie schnell startet ihr?
-Antwort: In der Regel innerhalb weniger Tage nach Angebotsfreigabe. Bei Notfällen sofort.
+Wie schnell könnt ihr starten?In der Regel 1–3 Werktage nach Freigabe.
 
-Frage: Muss ich persönlich vorbeikommen?
-Antwort: Nein. Fast alle Projekte können digital abgewickelt werden – per Telefon, Mail oder Zoom.
+Gibt es Support nach Fertigstellung?Ja – z. B. monatlich ab 29 €.
 
-🔹 9. Support & Änderungen
-Frage: Gibt es Support nach der Fertigstellung?
-Antwort: Ja. Auf Wunsch übernehmen wir die laufende Betreuung – z. B. mit monatlichen Paketen ab 29 €.
+Gibt es Pauschalpreise?Ja – für Websites, Chatbots & Beratung.
 
-Frage: Kann ich auch nach Monaten noch Änderungen machen lassen?
-Antwort: Natürlich. Änderungen oder Erweiterungen sind jederzeit möglich – nach Aufwand oder im Betreuungspaket.
+Ist Ratenzahlung möglich?Ja – auf Wunsch in 2–3 Teilbeträgen.
 
-🔹 10. Bezahlung & Vertragliches
-Frage: Wie läuft die Bezahlung?
-Antwort: In der Regel: 50 % Anzahlung, 50 % bei Übergabe. Andere Modelle sind nach Absprache möglich.
+Wie lange dauert eine Website?Onepager: ca. 7–10 Tage. Umfangreichere Projekte: 2–4 Wochen.
 
-Frage: Gibt es feste Verträge oder Laufzeiten?
-Antwort: Nur bei Betreuung auf Wunsch. Einmalige Projekte sind frei von Vertragsbindung.
+Welche Tools nutzt ihr?u. a. Webflow, WordPress, Make, Zapier, Notion, Chatbase, Canva
 
-🔹 11. Technisches & Sicherheit
-Frage: Sind eure Systeme sicher?
-Antwort: Ja. Wir achten auf DSGVO-konforme Umsetzung, HTTPS-Verschlüsselung, sichere Passwörter und Backup-Routinen.
+Sind eure Systeme DSGVO-konform?Ja – inkl. Cookie-Hinweise, Datenschutz, Hostingberatung.
 
-Frage: Wie schützt ihr meine Daten?
-Antwort: Alle Daten bleiben vertraulich und werden ausschließlich zur Projektabwicklung verwendet. Auf Wunsch unterzeichnen wir eine NDA.
+Für wen eignet sich UNOVAM?Für Selbstständige, KMU, Start-ups & Organisationen jeder Branche.
 
-🟦 Fragen zu Verfügbarkeit & Kontakt
-Frage: Wann seid ihr erreichbar?
-Antwort: Wir sind in der Regel werktags zwischen 09:00–18:00 Uhr erreichbar. Anfragen über das Kontaktformular oder WhatsApp werden meist innerhalb weniger Stunden beantwortet.
+Gibt es besondere Konditionen für Vereine?Ja – auf Anfrage bieten wir Rabatte für gemeinnützige Projekte.
 
-Frage: Kann ich euch per WhatsApp schreiben?
-Antwort: Ja, gerne. Klicke einfach auf das WhatsApp-Symbol unten rechts auf der Seite oder speichere unsere Nummer: 015209102547.
+Kann ich eigene Inhalte einreichen?Ja – du kannst Texte, Bilder, Videos bereitstellen.
 
-Frage: Gibt es persönliche Termine vor Ort?
-Antwort: Ja – nach Absprache. Die meisten Projekte lassen sich aber vollständig digital umsetzen.
+Gibt es Vorlagen oder ist alles individuell?Beides möglich – je nach Budget & Projektziel.
 
-🟦 Detailfragen zu Preisen & Zahlungsmodalitäten
-Frage: Gibt es Pauschalpreise?
-Antwort: Ja, viele Leistungen wie Websites oder Logos bieten wir zum Festpreis an. Komplexe Projekte kalkulieren wir individuell.
+Kann ein Chatbot mit CRM oder Shop verknüpft werden?Ja – sofern dein System eine API bietet, ist Integration möglich.
 
-Frage: Ist Ratenzahlung möglich?
-Antwort: Ja, auf Wunsch bieten wir 2–3 Teilzahlungen ohne Aufpreis an.
+Sind mehrsprachige Chatbots/Webseiten möglich?Ja – mit automatischer Spracherkennung auf Wunsch.
 
-Frage: Gibt es eine Rückerstattung, wenn ich abbreche?
-Antwort: Bei Projektabbruch vor Umsetzung fallen nur die bis dahin erbrachten Leistungen an. Eine Rückerstattung nach Abschluss ist ausgeschlossen.
+Kann ich PDFs oder Datenbanken einbinden lassen?Ja – wir können strukturierte Daten oder Dokumente einbinden & nutzbar machen.
 
-🟦 Technische Fragen & Systemdetails
-Frage: Was ist der Unterschied zwischen einem Chatbot und einem KI-Chatbot?
-Antwort: Ein klassischer Chatbot arbeitet mit vordefinierten Regeln. Unser KI-Chatbot nutzt Sprachmodelle wie GPT, um flexibel und intelligent zu antworten – wie ein echter Gesprächspartner.
-
-Frage: Wie wird ein Chatbot trainiert?
-Antwort: Wir verwenden deine Texte (z. B. FAQs, Angebote, Website-Inhalte) und integrieren sie in ein intelligentes System, das daraus passende Antworten generiert.
-
-Frage: Kann ich Inhalte später selbst ändern?
-Antwort: Ja. Wir zeigen dir, wie du Inhalte oder Fragen jederzeit anpassen kannst – ganz ohne Programmierkenntnisse.
-
-🟦 Spezialfälle & Bedenken
-Frage: Ich habe keine Ahnung von Technik. Ist das ein Problem?
-Antwort: Überhaupt nicht. Wir erklären dir alles Schritt für Schritt, verständlich und ohne Fachbegriffe. Du musst kein Technikprofi sein.
-
-Frage: Muss ich ein Abo abschließen?
-Antwort: Nein. Die meisten Leistungen sind einmalige Projekte. Nur wenn du eine laufende Betreuung willst (z. B. monatlicher Support), bieten wir faire Pakete an.
-
-Frage: Was passiert, wenn ich unzufrieden bin?
-Antwort: Dann sprechen wir offen darüber und finden eine Lösung. Bisher waren über 95 % unserer Kunden bei der ersten Übergabe zufrieden.
-
-🟦 Projektverlauf & Zeitplanung
-Frage: Wie lange dauert eine Website?
-Antwort: Ein Onepager dauert im Schnitt 7–10 Tage. Umfangreichere Seiten 2–4 Wochen – je nach Feedbackgeschwindigkeit und Inhalt.
-
-Frage: Wann startet ihr mit dem Projekt?
-Antwort: Sobald wir dein „Go“ und ggf. eine Anzahlung haben – meist innerhalb von 2 Werktagen.
-
-Frage: Wie oft werde ich über den Fortschritt informiert?
-Antwort: Du erhältst regelmäßig Zwischenstände – per E-Mail oder WhatsApp, je nach Wunsch.
-
-🟦 Systeme, Plattformen & Tools
-Frage: Mit welchen Systemen arbeitet ihr?
-Antwort: Wir setzen auf moderne Systeme wie WordPress, Webflow, Chatbase, Make, Zapier, Canva und Notion – je nach Anwendungsfall.
-
-Frage: Funktionieren die Tools auch auf dem Handy?
-Antwort: Ja. Alle unsere Webseiten und Anwendungen sind mobiloptimiert – auch für Tablets.
-
-
-🟦 Langfristige Betreuung
-Frage: Was kostet monatliche Wartung?
-Antwort: Kleine Wartungspakete starten ab 29 €/Monat. Darin enthalten sind z. B. Updates, Backups, kleine Änderungen und Support.
-
-
-🟩 Fragen zur Zusammenarbeit & Projektphasen
-Frage: Wie läuft ein typischer Website-Auftrag bei euch ab?
-Antwort: Nach deiner Anfrage führen wir ein kostenloses Erstgespräch, in dem wir Ziele und Wünsche klären. Anschließend bekommst du ein Angebot. Sobald du zusagst, beginnen wir mit der Umsetzung und stimmen uns regelmäßig ab. Zum Schluss erhältst du die fertige Website inklusive Einführung.
-
-Frage: Kann ich auch später nochmal Änderungen vornehmen lassen?
-Antwort: Ja, jederzeit. Du kannst Änderungen selbst machen oder uns beauftragen – stundenweise oder im Wartungspaket.
-
-Frage: Gibt es eine Testversion oder Entwurf vorab?
-Antwort: Ja, du bekommst vor der finalen Umsetzung einen Entwurf zur Freigabe.
-
-🟩 Spezielle Anwendungsfragen (z. B. Chatbots, Automatisierung)
-Frage: Kann der Chatbot auch mit meinem bestehenden CRM oder Shop verknüpft werden?
-Antwort: Ja, sofern dein System Schnittstellen (APIs) bietet. Wir helfen bei der Integration oder beraten dich zu alternativen Lösungen.
-
-Frage: Können mehrere Sprachen unterstützt werden?
-Antwort: Ja. Webseiten und Chatbots können auf Wunsch mehrsprachig aufgebaut werden – inklusive automatischer Spracherkennung.
-
-Frage: Ist es möglich, PDF-Dokumente oder Datenbanken in die KI einzubinden?
-Antwort: Ja. Wir können Dokumente, Tabellen oder strukturierte Inhalte einbinden und daraus intelligente Antworten generieren.
-
-🟩 Marketing & SEO-Fragen
-Frage: Wird meine Seite bei Google gefunden?
-Antwort: Ja. Wir richten deine Seite mit SEO-Grundstruktur ein – inkl. Keywords, Titel, Beschreibung und Technik (Speed, Sicherheit).
-
-Frage: Bietet ihr auch Google Ads oder Werbung an?
-Antwort: Aktuell liegt unser Fokus auf Webentwicklung und technischer Umsetzung. Auf Wunsch können wir Kontakte zu spezialisierten Partnern vermitteln.
-
-Frage: Unterstützt ihr bei Texten für die Website?
-Antwort: Ja, auf Wunsch übernehmen wir die komplette Texterstellung – mit professioneller Struktur, klarer Sprache und SEO-Grundlagen.
-
-🟩 Technische Beratung & Datenschutz
-Frage: Ist die Website DSGVO-konform?
-Antwort: Ja. Wir integrieren Cookie-Hinweise, Datenschutzseiten und technische Grundlagen für DSGVO-Konformität. Für rechtliche Texte empfehlen wir eine individuelle Prüfung durch einen Juristen.
-
-
-🟩 Branchenspezifische Fragen
-Frage: Macht ihr auch Webseiten für Restaurants / Friseure / Handwerker / Coaches?
-Antwort: Ja. Wir haben Erfahrung mit verschiedenen Branchen und passen Design und Funktion genau auf dein Geschäftsmodell an.
-
-Frage: Ich brauche nur eine kleine Visitenkarten-Seite – geht das auch?
-Antwort: Natürlich. Wir bieten auch einfache Onepager oder Landingpages an – zum kleinen Preis und mit kurzer Umsetzungszeit.
-
-Frage: Arbeitet ihr auch für Vereine oder gemeinnützige Organisationen?
-Antwort: Ja. Wir bieten vergünstigte Konditionen für gemeinnützige Projekte und beraten euch gerne persönlich.
-
-🟩 Extras & Individualisierung
-Frage: Kann ich eigene Bilder oder Texte liefern?
-Antwort: Ja. Du kannst uns Bilder, Texte oder Videos bereitstellen – wir binden sie passend in das Design ein.
-
-Frage: Arbeitet ihr auch mit Templates oder ist alles individuell?
-Antwort: Je nach Budget und Wunsch bieten wir sowohl individuell gestaltete Seiten als auch professionelle Vorlagen mit Anpassung an.
-
-Frage: Gibt es Hosting oder Domain direkt bei euch?
-Antwort: Nein. Wir helfen dir aber bei der Auswahl eines passenden Anbieters (z. B. IONOS, All-INKL, Strato) und übernehmen auf Wunsch die komplette Einrichtung.
+Was sind eure Öffnungszeiten?Wir sind werktags von Montag bis Freitag zwischen 09:00 und 18:00 Uhr erreichbar – per E-Mail, WhatsApp oder telefonisch.
