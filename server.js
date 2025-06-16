@@ -3,6 +3,11 @@ const bodyParser = require("body-parser");
 const dotenv = require("dotenv");
 const fs = require("fs");
 const cors = require("cors");
+const corsOptions = {
+  origin: "*", // ❗ für Tests – später evtl. deine Domain eintragen
+  methods: "GET,POST",
+  allowedHeaders: "Content-Type"
+};
 const OpenAI = require("openai");
 
 dotenv.config();
@@ -10,7 +15,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors()); // ❗ Wichtig für Wix & GitHub Pages
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(express.static(".")); // z. B. logo.png, index.html
 
