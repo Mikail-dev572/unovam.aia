@@ -98,11 +98,13 @@
 }
 
   .feedback button i[data-feather] {
-    width: 12px;
-    height: 12px;
-    stroke-width: 2;
-  }
-
+  width: 12px;
+  height: 12px;
+  stroke-width: 2;
+  stroke: #000;         /* Schwarz statt Blau */
+  color: #000;          /* Sicherheits-Fallback */
+  fill: none;           /* Keine Innenfläche */
+}
 
     #chat {
       flex: 1;
