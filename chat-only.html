@@ -90,8 +90,8 @@
     }
 
   .menu-dropdown button svg.feather-refresh-ccw {
-  width: 10px; /* oder 12px, 14px – wie du willst */
-  height: 10px;
+  width: 12px; /* oder 12px, 14px – wie du willst */
+  height: 12px;
   stroke-width: 1.5;
   vertical-align: middle;
   margin-right: 6px;
@@ -250,10 +250,7 @@
       0%, 80%, 100% { opacity: 0; }
       40% { opacity: 1; }
     }
-    .feedback button.active svg {
-  stroke: #000;
-  fill: #000;   
-}
+   
     .feedback button i[data-feather="check"] {
   width: 14px;
   height: 14px;
@@ -279,6 +276,11 @@ button i[data-feather],
 /* Sicherstellen, dass Texte im Menü nicht blau werden */
 .menu-dropdown button {
   color: #000;
+}
+.feedback button.active svg.feather-thumbs-up path,
+.feedback button.active svg.feather-thumbs-down path {
+  fill: #000;
+  stroke: none;
 }
   </style>
 </head>
