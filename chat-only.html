@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- nur zum Rebuild --> <!-- nur zum Rebuild -->
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
@@ -27,6 +27,8 @@
       left: 0;
       background: white;
       z-index: 9999;
+      border-radius: 0 !important;
+      box-shadow: none !important;
     }
 
     .chat-header {
@@ -38,7 +40,6 @@
       border-bottom: 1px solid #eee;
       font-weight: 600;
       font-size: 16px;
-      background: #fff;
     }
 
     .chat-header .logo {
@@ -88,6 +89,23 @@
       gap: 8px;
     }
 
+  .menu-dropdown button svg.feather-refresh-ccw {
+  width: 12px; /* oder 12px, 14px – wie du willst */
+  height: 12px;
+  stroke-width: 1.5;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+  .feedback button i[data-feather] {
+  width: 12px;
+  height: 12px;
+  stroke-width: 2;
+  stroke: #000;         /* Schwarz statt Blau */
+  color: #000;          /* Sicherheits-Fallback */
+  fill: none;           /* Keine Innenfläche */
+}
+
     #chat {
       flex: 1;
       overflow-y: auto;
@@ -130,7 +148,18 @@
       font-size: 14px;
       line-height: 1.5;
     }
+.feedback button svg {
+  stroke: #555;
+  fill: none;
+  transition: all 0.2s ease;
+}
 
+/* Daumen ausfüllen bei Aktivierung */
+.feedback button.active svg.feather-thumbs-up,
+.feedback button.active svg.feather-thumbs-down {
+  stroke: none;
+  fill: #000;
+}
     .user-message {
       background: #000;
       color: white;
@@ -165,6 +194,7 @@
     .feedback button svg {
       transition: all 0.3s ease;
       stroke: #000 !important;
+      color: #000 !important;
       fill: none !important;
     }
 
@@ -220,61 +250,38 @@
       0%, 80%, 100% { opacity: 0; }
       40% { opacity: 1; }
     }
+   
+    .feedback button i[data-feather="check"] {
+  width: 14px;
+  height: 14px;
+  stroke-width: 2;
+  vertical-align: middle;
+  transform: translateY(0.5px); /* optional: leichtes optisches Ausrichten */
+}
+   /* Allgemein: Feather-Icons auf Schwarz */
+button i[data-feather],
+.menu-dropdown i[data-feather],
+.feedback button i[data-feather] {
+  color: #000;
+  stroke: #000;
+  fill: none;
+}
 
-    /* Mobile-Schließen-Button */
-    #mobile-close-button {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 24px;
-      color: #fff;
-      cursor: pointer;
-    }
+/* Falls aktiv: auch gefüllte Icons (z. B. bei Klick) */
+.feedback button.active svg {
+  stroke: #000;
+  fill: #000;
+}
 
-    /* Floating-Button unten rechts (Desktop) */
-    #chat-close-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 10001;
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background-color: #000;
-      color: #fff;
-      font-size: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-      cursor: pointer;
-    }
-
-    /* Mobilansicht: Vollbild + X-Button oben rechts */
-    @media (max-width: 768px) {
-      #chat-box {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        border-radius: 0;
-        box-shadow: none;
-      }
-
-      .chat-header {
-        background: #000;
-        color: #fff;
-      }
-
-      #mobile-close-button {
-        display: block;
-      }
-
-      #chat-close-button {
-        display: none !important;
-      }
-    }
+/* Sicherstellen, dass Texte im Menü nicht blau werden */
+.menu-dropdown button {
+  color: #000;
+}
+.feedback button.active svg.feather-thumbs-up path,
+.feedback button.active svg.feather-thumbs-down path {
+  fill: #000;
+  stroke: none;
+}
   </style>
 </head>
 <body>
@@ -290,7 +297,6 @@
           <button onclick="neuerChat()"><i data-feather="refresh-ccw"></i> Neuen Chat starten</button>
         </div>
       </div>
-      <button id="mobile-close-button" onclick="schließeChat()">✕</button>
     </div>
     <div id="chat"></div>
     <div id="input-area">
@@ -298,8 +304,6 @@
       <button class="send" onclick="senden()">&#10148;</button>
     </div>
   </div>
-
-  <div id="chat-close-button" onclick="schließeChat()">⏷</div>
 
   <script>
     const chat = document.getElementById("chat");
@@ -381,33 +385,29 @@
 
     function copyMessage(button, id) {
       const text = document.getElementById(id).textContent;
-      navigator.clipboard.writeText(text).then(() => {
-        button.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
-          fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>`;
+     navigator.clipboard.writeText(text).then(() => {
+        button.innerHTML = `
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
+       fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+  </svg>
+`;
+  
         button.classList.add('active');
-        setTimeout(() => {
-          button.innerHTML = '<i data-feather="copy"></i>';
-          button.classList.remove('active');
-          feather.replace();
-        }, 2000);
-      });
-    }
+
+    setTimeout(() => {
+      button.innerHTML = '<i data-feather="copy"></i>';
+      button.classList.remove('active');
+      feather.replace();
+    }, 2000);
+  });
+}
+
 
     function handleFeedback(messageId, type, button) {
       const buttons = button.parentNode.querySelectorAll('button');
       buttons.forEach(b => b.classList.remove('active'));
       button.classList.add('active');
-    }
-
-    function schließeChat() {
-      document.getElementById("chat-box").style.display = "none";
-      document.getElementById("chat-close-button").style.display = "flex";
-    }
-
-    function öffneChat() {
-      document.getElementById("chat-box").style.display = "flex";
-      document.getElementById("chat-close-button").style.display = "none";
     }
 
     feather.replace();
