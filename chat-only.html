@@ -17,6 +17,15 @@
       color: #444;
     }
 
+    #chat-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 9998;
+    }
+
     #chat-box {
       display: flex;
       flex-direction: column;
@@ -263,10 +272,19 @@
         cursor: pointer;
         z-index: 1001;
       }
+      .menu-wrapper {
+        display: none;
+      }
+    }
+
+    .close-mobile i[data-feather="x"] {
+      stroke: #000;
+      color: #000;
     }
   </style>
 </head>
 <body>
+  <div id="chat-overlay"></div>
   <div id="chat-box">
     <div class="chat-header">
       <div class="logo">
@@ -274,22 +292,21 @@
         <span>unovam.de</span>
       </div>
       <div class="menu-wrapper">
-        <div class="menu" onclick="toggleMenu()">\u22EE</div>
+        <div class="menu" onclick="toggleMenu()">⋮</div>
         <div class="menu-dropdown" id="menu-dropdown">
           <button onclick="neuerChat()"><i data-feather="refresh-ccw"></i> Neuen Chat starten</button>
         </div>
       </div>
-      <button class="close-mobile" onclick="window.parent.postMessage('chat:close', '*')" aria-label="Chat schlie\u00dfen">
+      <button class="close-mobile" onclick="window.parent.postMessage('chat:close', '*')" aria-label="Chat schließen">
         <i data-feather="x"></i>
       </button>
     </div>
     <div id="chat"></div>
     <div id="input-area">
       <input id="input" placeholder="Nachricht eingeben..." />
-      <button class="send" onclick="senden()">&#10148;</button>
+      <button class="send" onclick="senden()">➤</button>
     </div>
   </div>
-
   <script>
     const chat = document.getElementById("chat");
     const inputField = document.getElementById("input");
@@ -371,10 +388,7 @@
     function copyMessage(button, id) {
       const text = document.getElementById(id).textContent;
       navigator.clipboard.writeText(text).then(() => {
-        button.innerHTML = `
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-          </svg>`;
+        button.innerHTML = `✔️`;
         button.classList.add('active');
         setTimeout(() => {
           button.innerHTML = '<i data-feather="copy"></i>';
@@ -390,14 +404,10 @@
       button.classList.add('active');
     }
 
-    // Schließe den Chat beim Klick außerhalb (nur Desktop)
-    document.addEventListener("click", function(event) {
-      const chatBox = document.getElementById("chat-box");
+    const chatOverlay = document.getElementById("chat-overlay");
+    chatOverlay.addEventListener("click", () => {
       if (window.innerWidth > 768) {
-        const clickedOutside = !chatBox.contains(event.target);
-        if (clickedOutside) {
-          window.parent.postMessage("chat:close", "*");
-        }
+        window.parent.postMessage("chat:close", "*");
       }
     });
 
