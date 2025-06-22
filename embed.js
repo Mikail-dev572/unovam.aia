@@ -106,4 +106,12 @@
     closeBtn.style.display = 'none';
     toggleBtn.setAttribute('aria-expanded', 'false');
   });
+  window.addEventListener('message', (event) => {
+  if (event.data?.type === 'close-chat') {
+    chatBox.style.display = 'none';
+    toggleBtn.style.display = 'flex';
+    closeBtn.style.display = 'none';
+    toggleBtn.setAttribute('aria-expanded', 'false');
+  }
+});
 })();
