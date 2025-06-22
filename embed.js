@@ -1,4 +1,5 @@
-(function () { // Nur auf Hauptseite ausführen, NICHT im eingebetteten iFrame
+(function () { 
+  // Nur auf Hauptseite ausführen, NICHT im eingebetteten iFrame
   if (window.location.search.includes('embedded=true')) return;
 
   const css = 
