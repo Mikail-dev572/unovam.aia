@@ -47,10 +47,10 @@ app.post("/frage", async (req, res) => {
   console.log("🟢 Eingehende Frage:", nutzerfrage);
 
   const alleDaten = eigeneDaten
-    ? Nutze dieses Firmenwissen:\n${eigeneDaten}\n\n
+    ? `Nutze dieses Firmenwissen:\n${eigeneDaten}\n\n`
     : "";
 
-  const prompt = 
+  const prompt = `
 Du bist ein professioneller, höflicher und hilfsbereiter Kundenberater der Firma UNOVAM.
 
 Verhalte dich wie ein echter Kundenservice-Mitarbeiter: Antworte per Sie, freundlich, kompetent und mit echtem Interesse, dem Kunden zu helfen.
@@ -64,7 +64,7 @@ ${eigeneDaten || "Kein internes Wissen verfügbar."}
 
 Nutzerfrage:
 ${nutzerfrage}
-;
+`;
 
   try {
     const antwort = await openai.chat.completions.create({
@@ -98,5 +98,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(✅ Chatbot läuft auf http://localhost:${PORT});
-}); 
+  console.log(`✅ Chatbot läuft auf http://localhost:${PORT}`);
+});
