@@ -1,5 +1,5 @@
 (function () {
-  // Nur auf Hauptseite ausfÃ¼hren, NICHT im eingebetteten iFrame
+  // Nur auf Hauptseite ausführen, NICHT im eingebetteten iFrame
   if (window.location.search.includes('embedded=true')) return;
 
   const css = `
@@ -61,6 +61,12 @@
         border-radius: 0;
       }
     }
+
+    @media (max-width: 768px) {
+      #chat-close {
+        bottom: 90px !important;
+      }
+    }
   `;
 
   const styleTag = document.createElement('style');
@@ -75,12 +81,12 @@
 
   const closeBtn = document.createElement('button');
   closeBtn.id = 'chat-close';
-  closeBtn.setAttribute('aria-label', 'Chat schlieÃŸen');
+  closeBtn.setAttribute('aria-label', 'Chat schließen');
   closeBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>`;
 
   const chatBox = document.createElement('iframe');
   chatBox.id = 'chat-box';
-  chatBox.src = 'https://mikail-dev572.github.io/unovam.aia/chat-only.html'; // korrektes Ziel
+  chatBox.src = 'https://mikail-dev572.github.io/unovam.aia/chat-only.html';
   chatBox.style.display = 'none';
 
   document.body.appendChild(toggleBtn);
@@ -100,6 +106,4 @@
     closeBtn.style.display = 'none';
     toggleBtn.setAttribute('aria-expanded', 'false');
   });
-
-  // WICHTIG: kein automatischer Start!
 })();
