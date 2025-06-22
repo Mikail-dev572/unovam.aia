@@ -292,8 +292,9 @@ button i[data-feather],
         <span>unovam.de</span>
       </div>
       <div class="menu-wrapper">
-        <div class="menu" onclick="toggleMenu()">⋮</div>
-        <div class="menu-dropdown" id="menu-dropdown">
+  <div class="menu" onclick="toggleMenu()">⋮</div>
+  <div id="mobile-close-btn" onclick="closeMobileChat()" style="display:none; font-size: 24px; font-weight: bold; margin-left: 12px; cursor: pointer;">✖</div>
+  <div class="menu-dropdown" id="menu-dropdown">
           <button onclick="neuerChat()"><i data-feather="refresh-ccw"></i> Neuen Chat starten</button>
         </div>
       </div>
@@ -403,12 +404,28 @@ button i[data-feather],
   });
 }
 
-
     function handleFeedback(messageId, type, button) {
       const buttons = button.parentNode.querySelectorAll('button');
       buttons.forEach(b => b.classList.remove('active'));
       button.classList.add('active');
     }
+function closeMobileChat() {
+  if (window !== window.parent) {
+    window.parent.postMessage({ type: 'close-chat' }, '*');
+  }
+}
+
+function handleMobileXDisplay() {
+  const mobileClose = document.getElementById('mobile-close-btn');
+  if (window.innerWidth <= 768) {
+    mobileClose.style.display = 'inline';
+  } else {
+    mobileClose.style.display = 'none';
+  }
+}
+
+window.addEventListener('load', handleMobileXDisplay);
+window.addEventListener('resize', handleMobileXDisplay);
 
     feather.replace();
   </script>
