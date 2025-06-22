@@ -1,8 +1,8 @@
-(function () { 
+(function () {
   // Nur auf Hauptseite ausführen, NICHT im eingebetteten iFrame
   if (window.location.search.includes('embedded=true')) return;
 
-  const css = 
+  const css = `
     * { box-sizing: border-box; }
     body {
       font-family: 'Inter', sans-serif;
@@ -67,7 +67,7 @@
         bottom: 90px !important;
       }
     }
-  ;
+  `;
 
   const styleTag = document.createElement('style');
   styleTag.innerText = css;
@@ -77,12 +77,12 @@
   toggleBtn.id = 'chat-toggle';
   toggleBtn.setAttribute('aria-label', 'Chat starten');
   toggleBtn.setAttribute('aria-expanded', 'false');
-  toggleBtn.innerHTML = <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>;
+  toggleBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>`;
 
   const closeBtn = document.createElement('button');
   closeBtn.id = 'chat-close';
   closeBtn.setAttribute('aria-label', 'Chat schließen');
-  closeBtn.innerHTML = <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>;
+  closeBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>`;
 
   const chatBox = document.createElement('iframe');
   chatBox.id = 'chat-box';
