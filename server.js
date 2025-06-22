@@ -3,19 +3,17 @@ const bodyParser = require("body-parser");
 const dotenv = require("dotenv");
 const fs = require("fs");
 const cors = require("cors");
+const corsOptions = {
+  origin: "*", // ❗ für Tests – später evtl. deine Domain eintragen
+  methods: "GET,POST",
+  allowedHeaders: "Content-Type"
+};
 const OpenAI = require("openai");
 
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-
-// CORS für Tests (achte auf Sicherheit bei Deployment)
-const corsOptions = {
-  origin: "*",
-  methods: "GET,POST",
-  allowedHeaders: "Content-Type"
-};
 
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
@@ -29,7 +27,7 @@ const openai = new OpenAI({
 const startnachricht =
   "Guten Tag! Ich bin der digitale Assistent von UNOVAM. Gerne beantworte ich Ihre Fragen zu unseren Leistungen, Preisen oder Projektabläufen. Wie kann ich helfen?";
 
-// Daten aus daten.txt laden (falls vorhanden)
+// Daten aus daten.txt (optional)
 let eigeneDaten = "";
 try {
   eigeneDaten = fs.readFileSync("daten.txt", "utf8");
@@ -38,7 +36,6 @@ try {
   console.warn("⚠️ Keine daten.txt gefunden. Bot nutzt nur Standardwissen.");
 }
 
-// POST-Endpunkt für Benutzerfragen
 app.post("/frage", async (req, res) => {
   const nutzerfrage = req.body.frage;
 
@@ -46,25 +43,14 @@ app.post("/frage", async (req, res) => {
     return res.status(400).json({ antwort: "Frage fehlt im Request." });
   }
 
+  // 🟢 Logging in Konsole (z. B. Render Logs)
   console.log("🟢 Eingehende Frage:", nutzerfrage);
 
-  // Themenfilter: nur relevante Fragen zulassen
-  const relevanteStichworte = [
-    "dienstleistung", "leistung", "angebot", "unovam", "projekt", "preis", "kosten", "ablauf", "wie funktioniert"
-  ];
+  const alleDaten = eigeneDaten
+    ? Nutze dieses Firmenwissen:\n${eigeneDaten}\n\n
+    : "";
 
-  const frageIstRelevant = relevanteStichworte.some((wort) =>
-    nutzerfrage.toLowerCase().includes(wort)
-  );
-
-  if (!frageIstRelevant) {
-    return res.json({
-      antwort:
-        "Ich bin auf Fragen rund um unsere Dienstleistungen spezialisiert. Bei anderen Themen kann ich leider nicht weiterhelfen.",
-    });
-  }
-
-  const prompt = `
+  const prompt = 
 Du bist ein professioneller, höflicher und hilfsbereiter Kundenberater der Firma UNOVAM.
 
 Verhalte dich wie ein echter Kundenservice-Mitarbeiter: Antworte per Sie, freundlich, kompetent und mit echtem Interesse, dem Kunden zu helfen.
@@ -78,7 +64,7 @@ ${eigeneDaten || "Kein internes Wissen verfügbar."}
 
 Nutzerfrage:
 ${nutzerfrage}
-`;
+;
 
   try {
     const antwort = await openai.chat.completions.create({
@@ -92,23 +78,25 @@ ${nutzerfrage}
         { role: "assistant", content: startnachricht },
         { role: "user", content: prompt },
       ],
-      max_tokens: 250,
+      max_tokens: 250, // ⬅️ technische Begrenzung der Antwortlänge
     });
 
     res.json({ antwort: antwort.choices[0].message.content });
   } catch (err) {
     console.error("❌ Fehler bei OpenAI:", err.message);
-    res.status(500).json({
-      antwort: "Fehler beim Antworten. Bitte später nochmal versuchen.",
-    });
+    res
+      .status(500)
+      .json({
+        antwort: "Fehler beim Antworten. Bitte später nochmal versuchen.",
+      });
   }
 });
 
-// Test-Route
+// Test-Route für Browser (Lebenszeichen)
 app.get("/", (req, res) => {
   res.send("✅ UNOVAM Chatbot-API läuft");
 });
 
 app.listen(PORT, () => {
-  console.log(`✅ Chatbot läuft auf http://localhost:${PORT}`);
+  console.log(✅ Chatbot läuft auf http://localhost:${PORT});
 });
