@@ -62,9 +62,10 @@
       }
     }
 
+    /* Mobil: runden Button unten rechts ausblenden */
     @media (max-width: 768px) {
       #chat-close {
-        bottom: 90px !important;
+        display: none !important;
       }
     }
   `;
@@ -86,7 +87,7 @@
 
   const chatBox = document.createElement('iframe');
   chatBox.id = 'chat-box';
-  chatBox.src = 'https://mikail-dev572.github.io/unovam.aia/chat-only.html';
+  chatBox.src = 'https://mikail-dev572.github.io/unovam.aia/chat-only.html'; // Stelle sicher, dass diese URL korrekt ist
   chatBox.style.display = 'none';
 
   document.body.appendChild(toggleBtn);
@@ -105,5 +106,15 @@
     toggleBtn.style.display = 'flex';
     closeBtn.style.display = 'none';
     toggleBtn.setAttribute('aria-expanded', 'false');
+  });
+
+  // Chat iFrame empfängt Close-Befehl von mobil sichtbarem "X"
+  window.addEventListener('message', (event) => {
+    if (event.data === 'chat:close') {
+      chatBox.style.display = 'none';
+      toggleBtn.style.display = 'flex';
+      closeBtn.style.display = 'none';
+      toggleBtn.setAttribute('aria-expanded', 'false');
+    }
   });
 })();
