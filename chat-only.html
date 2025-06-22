@@ -282,43 +282,22 @@ button i[data-feather],
   fill: #000;
   stroke: none;
 }
-    .close-mobile {
-  display: none;
-}
-    @media (max-width: 768px) {
-  .close-mobile {
-    display: display-block;
-    position: absolute;
-    top: 18px;
-    right: 18px;
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    z-index: 1001;
-  }
-}
   </style>
 </head>
 <body>
   <div id="chat-box">
-    <<div class="chat-header">
-  <div class="logo">
-    <img src="logo.png" alt="Logo" />
-    <span>unovam.de</span>
-  </div>
-  <div class="menu-wrapper">
-    <div class="menu" onclick="toggleMenu()">⋮</div>
-    <div class="menu-dropdown" id="menu-dropdown">
-      <button onclick="neuerChat()"><i data-feather="refresh-ccw"></i> Neuen Chat starten</button>
+    <div class="chat-header">
+      <div class="logo">
+        <img src="logo.png" alt="Logo" />
+        <span>unovam.de</span>
+      </div>
+      <div class="menu-wrapper">
+        <div class="menu" onclick="toggleMenu()">⋮</div>
+        <div class="menu-dropdown" id="menu-dropdown">
+          <button onclick="neuerChat()"><i data-feather="refresh-ccw"></i> Neuen Chat starten</button>
+        </div>
+      </div>
     </div>
-  </div>
-
-  <!-- Richtig: jetzt innerhalb von chat-header -->
-  <button class="close-mobile" onclick="window.parent.postMessage('chat:close', '*')" aria-label="Chat schließen">
-    <i data-feather="x"></i>
-  </button>
-</div>
     <div id="chat"></div>
     <div id="input-area">
       <input id="input" placeholder="Nachricht eingeben..." />
