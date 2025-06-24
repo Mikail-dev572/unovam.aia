@@ -3,10 +3,8 @@
 
   const style = document.createElement("style");
   style.textContent = `
-    #chat-toggle {
+    #chat-toggle, #chat-close {
       position: fixed;
-      bottom: 24px;
-      right: 24px;
       width: 56px;
       height: 56px;
       border-radius: 50%;
@@ -20,10 +18,22 @@
       cursor: pointer;
     }
 
-    #chat-toggle svg {
+    #chat-toggle {
+      bottom: 24px;
+      right: 24px;
+    }
+
+    #chat-toggle svg,
+    #chat-close svg {
       width: 28px;
       height: 28px;
       stroke: white;
+    }
+
+    #chat-close {
+      display: none;
+      bottom: 24px;
+      right: 24px;
     }
 
     #chat-box {
@@ -50,6 +60,19 @@
         height: 100%;
         border-radius: 0;
       }
+
+      #chat-close {
+        top: 20px;
+        right: 56px;
+        bottom: auto !important;
+        left: auto;
+        width: 42px;
+        height: 42px;
+        background: #1a1a1a;
+        position: fixed;
+        z-index: 1001;
+        display: flex !important;
+      }
     }
   `;
   document.head.appendChild(style);
@@ -62,63 +85,32 @@
       <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
     </svg>`;
 
+  const closeBtn = document.createElement("button");
+  closeBtn.id = "chat-close";
+  closeBtn.setAttribute("aria-label", "Chat schließen");
+  closeBtn.innerHTML = `
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="6 9 12 15 18 9"/>
+    </svg>`;
+
   const chatBox = document.createElement("iframe");
   chatBox.id = "chat-box";
   chatBox.src = "https://mikail-dev572.github.io/unovam.aia/chat-only.html?embedded=true";
   chatBox.style.display = "none";
 
   document.body.appendChild(toggleBtn);
+  document.body.appendChild(closeBtn);
   document.body.appendChild(chatBox);
 
   toggleBtn.addEventListener("click", () => {
     chatBox.style.display = "flex";
     toggleBtn.style.display = "none";
+    closeBtn.style.display = "flex";
+  });
 
-    chatBox.addEventListener("load", () => {
-      try {
-        const iframeDoc = chatBox.contentDocument || chatBox.contentWindow.document;
-        const header = iframeDoc.querySelector(".chat-header");
-        if (!header || iframeDoc.getElementById("chat-close")) return;
-
-        // Button erzeugen
-        const closeBtn = iframeDoc.createElement("button");
-        closeBtn.id = "chat-close";
-        closeBtn.setAttribute("aria-label", "Chat schließen");
-        closeBtn.innerHTML = `
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="6 9 12 15 18 9"/>
-          </svg>`;
-
-        // Button-Styling direkt im Header neben Menü-Icon
-        closeBtn.style.cssText = `
-          background: #1a1a1a;
-          color: white;
-          border: none;
-          border-radius: 50%;
-          width: 40px;
-          height: 40px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          cursor: pointer;
-          position: absolute;
-          top: 8px;
-          right: 56px;
-          z-index: 10;
-        `;
-
-        // Header vorbereiten
-        header.style.position = "relative";
-        header.appendChild(closeBtn);
-
-        closeBtn.addEventListener("click", () => {
-          chatBox.style.display = "none";
-          toggleBtn.style.display = "flex";
-        });
-
-      } catch (e) {
-        console.error("Close-Button konnte nicht platziert werden:", e);
-      }
-    });
+  closeBtn.addEventListener("click", () => {
+    chatBox.style.display = "none";
+    toggleBtn.style.display = "flex";
+    closeBtn.style.display = "none";
   });
 })();
