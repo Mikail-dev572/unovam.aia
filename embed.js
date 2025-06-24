@@ -1,5 +1,4 @@
 (function () {
-  // Nur auf Hauptseite ausführen, NICHT im eingebetteten iFrame
   if (window.location.search.includes('embedded=true')) return;
 
   const css = `
@@ -57,15 +56,19 @@
       }
 
       #chat-close {
-        top: 16px;
-        left: 16px;
-        right: auto;
+        position: absolute;
+        top: 12px;
+        right: 56px;
         bottom: auto !important;
-        width: 36px;
-        height: 36px;
+        left: auto;
+        width: 32px;
+        height: 32px;
         background: #444;
-        position: fixed;
         z-index: 1001;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
   `;
