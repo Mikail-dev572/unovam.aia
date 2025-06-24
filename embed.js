@@ -1,6 +1,7 @@
 (function () {
   if (window.location.search.includes('embedded=true')) return;
 
+  // === STYLE DEFINIEREN ===
   const style = document.createElement("style");
   style.textContent = `
     #chat-toggle, #chat-close {
@@ -62,7 +63,7 @@
       }
 
       #chat-close {
-        top: 20px;
+        top: 44px; /* Höhe exakt auf Linie mit den drei Punkten */
         right: 56px;
         bottom: auto !important;
         left: auto;
@@ -71,12 +72,15 @@
         background: #1a1a1a;
         position: fixed;
         z-index: 1001;
-        display: flex !important;
+        display: none;
+        align-items: center;
+        justify-content: center;
       }
     }
   `;
   document.head.appendChild(style);
 
+  // === ELEMENTE ERSTELLEN ===
   const toggleBtn = document.createElement("button");
   toggleBtn.id = "chat-toggle";
   toggleBtn.setAttribute("aria-label", "Chat starten");
@@ -102,6 +106,7 @@
   document.body.appendChild(closeBtn);
   document.body.appendChild(chatBox);
 
+  // === VERHALTEN ===
   toggleBtn.addEventListener("click", () => {
     chatBox.style.display = "flex";
     toggleBtn.style.display = "none";
