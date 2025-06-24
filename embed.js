@@ -1,16 +1,8 @@
-<script>
 (function () {
   // Nur auf Hauptseite ausführen, NICHT im eingebetteten iFrame
   if (window.location.search.includes('embedded=true')) return;
 
   const css = `
-    * { box-sizing: border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #f9fafb;
-      color: #444;
-    }
-
     #chat-toggle, #chat-close {
       position: fixed;
       bottom: 24px;
@@ -55,7 +47,7 @@
       border: none;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       #chat-box {
         bottom: 0;
         right: 0;
@@ -63,9 +55,7 @@
         height: 100%;
         border-radius: 0;
       }
-    }
 
-    @media (max-width: 768px) {
       #chat-close {
         top: 16px;
         left: 16px;
@@ -74,12 +64,8 @@
         width: 36px;
         height: 36px;
         background: #444;
-        z-index: 1001;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         position: fixed;
+        z-index: 1001;
       }
     }
   `;
@@ -92,16 +78,22 @@
   toggleBtn.id = 'chat-toggle';
   toggleBtn.setAttribute('aria-label', 'Chat starten');
   toggleBtn.setAttribute('aria-expanded', 'false');
-  toggleBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>`;
+  toggleBtn.innerHTML = `
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+    </svg>`;
 
   const closeBtn = document.createElement('button');
   closeBtn.id = 'chat-close';
   closeBtn.setAttribute('aria-label', 'Chat schließen');
-  closeBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>`;
+  closeBtn.innerHTML = `
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="6 9 12 15 18 9"/>
+    </svg>`;
 
   const chatBox = document.createElement('iframe');
   chatBox.id = 'chat-box';
-  chatBox.src = 'https://mikail-dev572.github.io/unovam.aia/chat-only.html';
+  chatBox.src = 'https://mikail-dev572.github.io/unovam.aia/chat-only.html?embedded=true';
   chatBox.style.display = 'none';
 
   document.body.appendChild(toggleBtn);
@@ -122,4 +114,3 @@
     toggleBtn.setAttribute('aria-expanded', 'false');
   });
 })();
-</script>
