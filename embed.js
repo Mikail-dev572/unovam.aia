@@ -63,7 +63,7 @@
       }
 
       #chat-close {
-        top: 66px; /* Höhe exakt auf Linie mit den drei Punkten */
+        top: 68px; /* Höhe exakt auf Linie mit den drei Punkten */
         right: 56px;
         bottom: auto !important;
         left: auto;
