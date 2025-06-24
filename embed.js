@@ -1,13 +1,10 @@
 (function () {
   if (window.location.search.includes('embedded=true')) return;
 
-  // === STYLES ===
   const styleTag = document.createElement("style");
   styleTag.textContent = `
-    #chat-toggle {
+    #chat-toggle, #chat-close {
       position: fixed;
-      bottom: 24px;
-      right: 24px;
       width: 56px;
       height: 56px;
       border-radius: 50%;
@@ -21,10 +18,22 @@
       cursor: pointer;
     }
 
-    #chat-toggle svg {
+    #chat-toggle {
+      bottom: 24px;
+      right: 24px;
+    }
+
+    #chat-toggle svg,
+    #chat-close svg {
       width: 28px;
       height: 28px;
       stroke: white;
+    }
+
+    #chat-close {
+      display: none;
+      bottom: 24px;
+      right: 24px;
     }
 
     #chat-box {
@@ -53,11 +62,23 @@
         height: 100% !important;
         border-radius: 0 !important;
       }
+
+      #chat-close {
+        top: 12px;
+        right: 56px;
+        bottom: auto !important;
+        left: auto;
+        width: 42px;
+        height: 42px;
+        background: #222;
+        position: fixed;
+        z-index: 1001;
+        display: flex !important;
+      }
     }
   `;
   document.head.appendChild(styleTag);
 
-  // === ELEMENTE ===
   const toggleBtn = document.createElement("button");
   toggleBtn.id = "chat-toggle";
   toggleBtn.setAttribute("aria-label", "Chat starten");
@@ -67,58 +88,34 @@
       <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
     </svg>`;
 
+  const closeBtn = document.createElement("button");
+  closeBtn.id = "chat-close";
+  closeBtn.setAttribute("aria-label", "Chat schließen");
+  closeBtn.innerHTML = `
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="6 9 12 15 18 9"/>
+    </svg>`;
+
   const chatBox = document.createElement("iframe");
   chatBox.id = "chat-box";
   chatBox.src = "https://mikail-dev572.github.io/unovam.aia/chat-only.html?embedded=true";
   chatBox.style.display = "none";
 
   document.body.appendChild(toggleBtn);
+  document.body.appendChild(closeBtn);
   document.body.appendChild(chatBox);
 
-  // === BUTTON-LOGIK ===
   toggleBtn.addEventListener("click", () => {
     chatBox.style.display = "flex";
     toggleBtn.style.display = "none";
+    closeBtn.style.display = "flex";
+    toggleBtn.setAttribute("aria-expanded", "true");
+  });
 
-    chatBox.addEventListener("load", () => {
-      try {
-        const iframeDoc = chatBox.contentDocument || chatBox.contentWindow.document;
-        const header = iframeDoc.querySelector(".chat-header");
-        if (!header || iframeDoc.getElementById("chat-close")) return;
-
-        const closeBtn = iframeDoc.createElement("button");
-        closeBtn.id = "chat-close";
-        closeBtn.setAttribute("aria-label", "Chat schließen");
-        closeBtn.innerHTML = `
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="6 9 12 15 18 9"/>
-          </svg>`;
-        closeBtn.style.cssText = `
-          position: absolute;
-          top: 12px;
-          right: 56px;
-          width: 42px;
-          height: 42px;
-          background: #222;
-          color: white;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border: none;
-          z-index: 1001;
-        `;
-
-        closeBtn.addEventListener("click", () => {
-          chatBox.style.display = "none";
-          toggleBtn.style.display = "flex";
-        });
-
-        header.style.position = "relative"; // Positionierung als Anker
-        header.appendChild(closeBtn);
-      } catch (err) {
-        console.error("Fehler beim Einfügen des Schließen-Buttons:", err);
-      }
-    });
+  closeBtn.addEventListener("click", () => {
+    chatBox.style.display = "none";
+    toggleBtn.style.display = "flex";
+    closeBtn.style.display = "none";
+    toggleBtn.setAttribute("aria-expanded", "false");
   });
 })();
