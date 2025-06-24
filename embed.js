@@ -55,27 +55,32 @@
     }
 
     @media (max-width: 768px) {
-      #chat-box {
-        bottom: 0 !important;
-        right: 0 !important;
-        width: 100% !important;
-        height: 100% !important;
-        border-radius: 0 !important;
-      }
+  #chat-box {
+    bottom: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 0 !important;
+  }
 
-      #chat-close {
-        top: 12px;
-        right: 56px;
-        bottom: auto !important;
-        left: auto;
-        width: 42px;
-        height: 42px;
-        background: #222;
-        position: fixed;
-        z-index: 1001;
-        display: flex !important;
-      }
-    }
+  #chat-close {
+    position: fixed;
+    top: calc(env(safe-area-inset-top, 0px) + 28px); /* Grundhöhe */
+    transform: translateY(6px); /* Feinjustierung */
+    right: 56px;
+    width: 42px;
+    height: 42px;
+    background: #222;
+    border-radius: 50%;
+    z-index: 1001;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+}
+
   `;
   document.head.appendChild(styleTag);
 
