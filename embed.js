@@ -1,7 +1,7 @@
 (function () {
   if (window.location.search.includes('embedded=true')) return;
 
-  // === STYLE DEFINIEREN ===
+  // === STYLE ===
   const style = document.createElement("style");
   style.textContent = `
     #chat-toggle, #chat-close {
@@ -13,10 +13,12 @@
       background: #1a1a1a;
       color: white;
       z-index: 1000;
-      display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
+      display: flex;
+      opacity: 1;
+      transition: opacity 0.3s ease;
     }
 
     #chat-toggle {
@@ -32,9 +34,8 @@
     }
 
     #chat-close {
-      display: none;
-      bottom: 24px;
-      right: 24px;
+      opacity: 0;
+      pointer-events: none;
     }
 
     #chat-box {
@@ -48,9 +49,12 @@
       background: white;
       border-radius: 16px;
       box-shadow: 0 8px 30px rgba(0,0,0,0.25);
-      display: none;
+      opacity: 0;
+      transform: translateY(20px);
+      pointer-events: none;
       z-index: 999;
       border: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
     }
 
     @media (max-width: 768px) {
@@ -63,7 +67,7 @@
       }
 
       #chat-close {
-        top: 68px; /* Höhe exakt auf Linie mit den drei Punkten */
+        top: 44px;
         right: 56px;
         bottom: auto !important;
         left: auto;
@@ -72,15 +76,12 @@
         background: #1a1a1a;
         position: fixed;
         z-index: 1001;
-        display: none;
-        align-items: center;
-        justify-content: center;
       }
     }
   `;
   document.head.appendChild(style);
 
-  // === ELEMENTE ERSTELLEN ===
+  // === ELEMENTE ===
   const toggleBtn = document.createElement("button");
   toggleBtn.id = "chat-toggle";
   toggleBtn.setAttribute("aria-label", "Chat starten");
@@ -100,7 +101,6 @@
   const chatBox = document.createElement("iframe");
   chatBox.id = "chat-box";
   chatBox.src = "https://mikail-dev572.github.io/unovam.aia/chat-only.html?embedded=true";
-  chatBox.style.display = "none";
 
   document.body.appendChild(toggleBtn);
   document.body.appendChild(closeBtn);
@@ -108,14 +108,26 @@
 
   // === VERHALTEN ===
   toggleBtn.addEventListener("click", () => {
-    chatBox.style.display = "flex";
-    toggleBtn.style.display = "none";
-    closeBtn.style.display = "flex";
+    chatBox.style.opacity = "1";
+    chatBox.style.transform = "translateY(0)";
+    chatBox.style.pointerEvents = "auto";
+
+    toggleBtn.style.opacity = "0";
+    toggleBtn.style.pointerEvents = "none";
+
+    closeBtn.style.opacity = "1";
+    closeBtn.style.pointerEvents = "auto";
   });
 
   closeBtn.addEventListener("click", () => {
-    chatBox.style.display = "none";
-    toggleBtn.style.display = "flex";
-    closeBtn.style.display = "none";
+    chatBox.style.opacity = "0";
+    chatBox.style.transform = "translateY(20px)";
+    chatBox.style.pointerEvents = "none";
+
+    toggleBtn.style.opacity = "1";
+    toggleBtn.style.pointerEvents = "auto";
+
+    closeBtn.style.opacity = "0";
+    closeBtn.style.pointerEvents = "none";
   });
 })();
