@@ -67,7 +67,7 @@
       }
 
       #chat-close {
-        top: 44px;
+        top: 68px;
         right: 56px;
         bottom: auto !important;
         left: auto;
