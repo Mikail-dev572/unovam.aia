@@ -1,3 +1,4 @@
+<script>
 (function () {
   // Nur auf Hauptseite ausführen, NICHT im eingebetteten iFrame
   if (window.location.search.includes('embedded=true')) return;
@@ -32,7 +33,9 @@
       stroke: white;
     }
 
-    #chat-close { display: none; }
+    #chat-close {
+      display: none;
+    }
 
     #chat-box {
       position: fixed;
@@ -64,7 +67,19 @@
 
     @media (max-width: 768px) {
       #chat-close {
-        bottom: 90px !important;
+        top: 16px;
+        left: 16px;
+        right: auto;
+        bottom: auto !important;
+        width: 36px;
+        height: 36px;
+        background: #444;
+        z-index: 1001;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
       }
     }
   `;
@@ -107,3 +122,4 @@
     toggleBtn.setAttribute('aria-expanded', 'false');
   });
 })();
+</script>
