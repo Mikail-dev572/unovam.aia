@@ -34,9 +34,23 @@
     }
 
     #chat-close {
-      opacity: 0;
-      pointer-events: none;
-    }
+  position: fixed;
+  bottom: 90px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #1a1a1a;
+  color: white;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
 
     #chat-box {
       position: fixed;
