@@ -27,6 +27,11 @@
       bottom: 24px;
       right: 24px;
     }
+    
+    #chat-close {
+  bottom: 24px;
+  right: 24px;
+}
 
     #chat-toggle svg,
     #chat-close svg {
