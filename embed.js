@@ -4,22 +4,24 @@
   // === STYLE ===
   const style = document.createElement("style");
   style.textContent = `
-    #chat-toggle, #chat-close {
-      position: fixed;
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      border: none;
-      background: #1a1a1a;
-      color: white;
-      z-index: 1000;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      display: flex;
-      opacity: 1;
-      transition: opacity 0.3s ease;
-    }
+   #chat-toggle, #chat-close {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  background: #1a1a1a;
+  color: white;
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  display: flex;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
 
     #chat-toggle {
       bottom: 24px;
