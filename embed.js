@@ -4,34 +4,33 @@
   // === STYLE ===
   const style = document.createElement("style");
   style.textContent = `
-   #chat-toggle, #chat-close {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  border: none;
-  background: #1a1a1a;
-  color: white;
-  z-index: 1000;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  display: flex;
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-
-    #chat-toggle {
+    #chat-toggle, #chat-close {
+      position: fixed;
       bottom: 24px;
       right: 24px;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      border: none;
+      background: #1a1a1a;
+      color: white;
+      z-index: 1001;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      display: flex;
+      transition: opacity 0.3s ease;
     }
-    
+
+    #chat-toggle {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
     #chat-close {
-  bottom: 24px;
-  right: 24px;
-}
+      opacity: 0;
+      pointer-events: none;
+    }
 
     #chat-toggle svg,
     #chat-close svg {
@@ -39,25 +38,6 @@
       height: 28px;
       stroke: white;
     }
-
-    #chat-close {
-  position: fixed;
-  bottom: 90px;
-  right: 24px;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: #1a1a1a;
-  color: white;
-  z-index: 1001;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
 
     #chat-box {
       position: fixed;
